@@ -1,0 +1,435 @@
+{
+  "services": [
+    {
+      "id": "video-surveillance",
+      "slug": "video-surveillance",
+      "title": "Video Surveillance",
+      "subtitle": "CCTV Systems",
+      "description": "Advanced cloud and on-premise solutions with smart analytics and triple redundancy.",
+      "shortDescription": "24/7 monitoring with AI-powered analytics",
+      "accent": "from-blue-400 to-blue-600",
+      "icon": "Cctv",
+      "heroImage": "/images/services/camera.png",
+      "gallery": [
+        "/images/services/cctv1.jpg",
+        "/images/services/cctv2.jpg",
+        "/images/services/cctv3.jpg"
+      ],
+      "features": [
+        {
+          "title": "Cloud and On-Premise Solutions",
+          "description": "Flexible deployment options to meet your specific needs",
+          "icon": "Cloud"
+        },
+        {
+          "title": "Smart Analytics & AI Detection",
+          "description": "Advanced AI algorithms for threat detection and behavior analysis",
+          "icon": "Brain"
+        },
+        {
+          "title": "Triple Redundancy",
+          "description": "Multiple backup systems ensure 99.9% uptime",
+          "icon": "Shield"
+        },
+        {
+          "title": "4K Ultra HD Recording",
+          "description": "Crystal clear footage for detailed evidence collection",
+          "icon": "Camera"
+        },
+        {
+          "title": "Remote Monitoring",
+          "description": "Access your security system from anywhere, anytime",
+          "icon": "Smartphone"
+        },
+        {
+          "title": "Facial Recognition",
+          "description": "Advanced biometric identification technology",
+          "icon": "User"
+        }
+      ],
+      "benefits": [
+        "Reduce security incidents by up to 70%",
+        "24/7 automated monitoring with instant alerts",
+        "Scalable solution that grows with your business",
+        "Integration with existing security infrastructure"
+      ],
+      "specifications": {
+        "resolution": "Up to 4K Ultra HD",
+        "storage": "Cloud & Local options available",
+        "connectivity": "Ethernet, WiFi, 4G/5G",
+        "coverage": "Indoor & Outdoor weatherproof",
+        "analytics": "AI-powered smart detection",
+        "integration": "Compatible with major platforms"
+      },
+      "caseStudy": {
+        "title": "Government Facility Protection",
+        "description": "Deployed comprehensive CCTV system across 15 government buildings in DC Metro area",
+        "results": [
+          "90% reduction in security incidents",
+          "Improved response time by 60%",
+          "Enhanced visitor management"
+        ]
+      }
+    },
+    {
+      "id": "access-control",
+      "slug": "access-control",
+      "title": "Access Control",
+      "subtitle": "Security Systems",
+      "description": "Scalable access systems including Brivo enterprise solutions and advanced card access control.",
+      "shortDescription": "Control who enters your facility with precision",
+      "accent": "from-emerald-400 to-emerald-600",
+      "icon": "Key",
+      "heroImage": "/images/services/access-control-hero.jpg",
+      "gallery": [
+        "/images/services/access-1.jpg",
+        "/images/services/access-2.jpg",
+        "/images/services/access-3.jpg",
+        "/images/services/access-4.jpg"
+      ],
+      "features": [
+        {
+          "title": "Brivo Cloud Platform",
+          "description": "Enterprise-grade cloud-based access management",
+          "icon": "Cloud"
+        },
+        {
+          "title": "Biometric Authentication",
+          "description": "Fingerprint and facial recognition technology",
+          "icon": "Fingerprint"
+        },
+        {
+          "title": "Mobile Credentials",
+          "description": "Smartphone-based access for modern convenience",
+          "icon": "Smartphone"
+        },
+        {
+          "title": "Time-Based Permissions",
+          "description": "Flexible scheduling and temporary access control",
+          "icon": "Clock"
+        },
+        {
+          "title": "Audit Trail & Reporting",
+          "description": "Comprehensive logs and analytics dashboard",
+          "icon": "FileText"
+        },
+        {
+          "title": "Multi-Site Management",
+          "description": "Centralized control across multiple locations",
+          "icon": "Building"
+        }
+      ],
+      "benefits": [
+        "Eliminate key management overhead",
+        "Real-time access monitoring and alerts",
+        "Seamless integration with HR systems",
+        "Reduced security breaches by 85%"
+      ],
+      "specifications": {
+        "authentication": "Card, Biometric, Mobile, PIN",
+        "capacity": "Unlimited users and access points",
+        "integration": "HR, Visitor Management, CCTV",
+        "connectivity": "Ethernet, WiFi, Cellular backup",
+        "compliance": "SOC 2, HIPAA, PCI DSS ready",
+        "management": "Cloud-based central console"
+      },
+      "caseStudy": {
+        "title": "Corporate Campus Security",
+        "description": "Implemented multi-building access control system for Fortune 500 company",
+        "results": [
+          "Secured 50+ access points across 5 buildings",
+          "Reduced unauthorized access by 95%",
+          "Streamlined employee onboarding process"
+        ]
+      }
+    },
+    {
+      "id": "cybersecurity",
+      "slug": "cybersecurity",
+      "title": "Cybersecurity & IT Services",
+      "subtitle": "Digital Protection",
+      "description": "Comprehensive network security, infrastructure design, and endpoint protection with cross-platform secure deployment.",
+      "shortDescription": "Protect your digital assets with enterprise-grade security",
+      "accent": "from-purple-400 to-purple-600",
+      "icon": "Shield",
+      "heroImage": "/images/services/cybersecurity-hero.jpg",
+      "gallery": [
+        "/images/services/cyber-1.jpg",
+        "/images/services/cyber-2.jpg",
+        "/images/services/cyber-3.jpg",
+        "/images/services/cyber-4.jpg"
+      ],
+      "features": [
+        {
+          "title": "Network Security Design",
+          "description": "Custom network architecture with built-in security protocols",
+          "icon": "Network"
+        },
+        {
+          "title": "Endpoint Protection",
+          "description": "Advanced malware detection and prevention across all devices",
+          "icon": "Laptop"
+        },
+        {
+          "title": "Vulnerability Assessments",
+          "description": "Regular security audits and penetration testing",
+          "icon": "Search"
+        },
+        {
+          "title": "Incident Response",
+          "description": "24/7 security operations center and rapid response team",
+          "icon": "AlertTriangle"
+        },
+        {
+          "title": "Security Training",
+          "description": "Employee awareness programs and phishing simulations",
+          "icon": "GraduationCap"
+        },
+        {
+          "title": "Compliance Management",
+          "description": "HIPAA, SOC 2, PCI DSS compliance frameworks",
+          "icon": "CheckCircle"
+        }
+      ],
+      "benefits": [
+        "Reduce cyber attack risk by 95%",
+        "Ensure regulatory compliance",
+        "Minimize business disruption",
+        "Protect sensitive data and intellectual property"
+      ],
+      "specifications": {
+        "platforms": "Windows, macOS, Linux, Mobile",
+        "standards": "NIST, ISO 27001, SOC 2",
+        "monitoring": "24/7 SOC with AI-powered threat detection",
+        "response": "< 15 minutes incident response time",
+        "coverage": "Network, endpoint, cloud, and email security",
+        "compliance": "HIPAA, PCI DSS, GDPR ready"
+      },
+      "caseStudy": {
+        "title": "Healthcare Network Security Overhaul",
+        "description": "Secured a regional healthcare network with 12 facilities and 5,000+ endpoints",
+        "results": [
+          "Zero successful cyber attacks in 2 years",
+          "Achieved HIPAA compliance across all facilities",
+          "Reduced security incidents by 92%"
+        ]
+      }
+    },
+    {
+      "id": "fire-protection",
+      "slug": "fire-protection",
+      "title": "Fire Protection Systems",
+      "subtitle": "Life Safety",
+      "description": "Critical fire protection with rapid response systems - because fire doubles in size every minute, timing is everything.",
+      "shortDescription": "Rapid fire detection and suppression systems",
+      "accent": "from-red-400 to-red-600",
+      "icon": "Flame",
+      "heroImage": "/images/services/fire-protection-hero.jpg",
+      "gallery": [
+        "/images/services/fire-1.jpg",
+        "/images/services/fire-2.jpg",
+        "/images/services/fire-3.jpg",
+        "/images/services/fire-4.jpg"
+      ],
+      "features": [
+        {
+          "title": "Automatic Sprinkler Systems",
+          "description": "Advanced wet, dry, and pre-action sprinkler systems",
+          "icon": "Droplets"
+        },
+        {
+          "title": "Fire Alarm Systems",
+          "description": "Intelligent addressable fire detection and notification",
+          "icon": "Bell"
+        },
+        {
+          "title": "Clean Agent Suppression",
+          "description": "Halon-free clean agent systems for sensitive equipment",
+          "icon": "Wind"
+        },
+        {
+          "title": "Emergency Evacuation",
+          "description": "Voice evacuation and emergency communication systems",
+          "icon": "Volume2"
+        },
+        {
+          "title": "Fire Pumps & Water Supply",
+          "description": "Reliable water supply systems and fire pump maintenance",
+          "icon": "Zap"
+        },
+        {
+          "title": "Code Compliance",
+          "description": "NFPA, local fire code compliance and inspections",
+          "icon": "FileCheck"
+        }
+      ],
+      "benefits": [
+        "Protect lives and minimize property damage",
+        "Ensure full code compliance and insurance requirements",
+        "Reduce response time to under 60 seconds",
+        "Lower insurance premiums with certified systems"
+      ],
+      "specifications": {
+        "detection": "Smoke, heat, flame, and gas detection",
+        "suppression": "Water, foam, and clean agent systems",
+        "response": "< 60 seconds detection to suppression",
+        "coverage": "Buildings up to 500,000 sq ft",
+        "standards": "NFPA 13, 72, 2001 compliant",
+        "monitoring": "24/7 central station monitoring"
+      },
+      "caseStudy": {
+        "title": "Data Center Fire Protection",
+        "description": "Installed clean agent suppression system in critical government data center",
+        "results": [
+          "Protected $50M in critical infrastructure",
+          "Zero fire-related downtime in 5 years",
+          "Passed all regulatory inspections"
+        ]
+      }
+    },
+    {
+      "id": "networking-solutions",
+      "slug": "networking-solutions",
+      "title": "Networking Solutions",
+      "subtitle": "Infrastructure & Connectivity",
+      "description": "Complete network design, deployment, and maintenance for wired and wireless networks across offices, facilities, and remote sites.",
+      "shortDescription": "Robust network infrastructure for seamless connectivity",
+      "accent": "from-cyan-400 to-cyan-600",
+      "icon": "Network",
+      "heroImage": "/images/services/networking-hero.jpg",
+      "gallery": [
+        "/images/services/network-1.jpg",
+        "/images/services/network-2.jpg",
+        "/images/services/network-3.jpg",
+        "/images/services/network-4.jpg"
+      ],
+      "features": [
+        {
+          "title": "Structured Cabling",
+          "description": "Cat6A, fiber optic, and low voltage cabling infrastructure",
+          "icon": "Cable"
+        },
+        {
+          "title": "Wireless Networks",
+          "description": "Enterprise-grade WiFi 6 and mesh networking solutions",
+          "icon": "Wifi"
+        },
+        {
+          "title": "Network Security",
+          "description": "Firewalls, VPNs, and intrusion prevention systems",
+          "icon": "Lock"
+        },
+        {
+          "title": "Cloud Integration",
+          "description": "Hybrid cloud connectivity and SD-WAN solutions",
+          "icon": "Cloud"
+        },
+        {
+          "title": "Network Monitoring",
+          "description": "Real-time performance monitoring and management",
+          "icon": "Activity"
+        },
+        {
+          "title": "Redundancy & Failover",
+          "description": "Multiple ISP connections and automatic failover systems",
+          "icon": "RefreshCw"
+        }
+      ],
+      "benefits": [
+        "99.99% network uptime guarantee",
+        "Scalable infrastructure that grows with your business",
+        "Enhanced security with enterprise-grade equipment",
+        "Improved productivity with high-speed connectivity"
+      ],
+      "specifications": {
+        "speed": "Up to 100 Gbps backbone capacity",
+        "coverage": "Buildings up to 1M sq ft",
+        "wireless": "WiFi 6E with seamless roaming",
+        "security": "Next-gen firewalls with IPS/IDS",
+        "redundancy": "Dual ISP with automatic failover",
+        "support": "24/7 network operations center"
+      },
+      "caseStudy": {
+        "title": "Corporate Headquarters Network Upgrade",
+        "description": "Designed and deployed network infrastructure for 2,000-employee corporate campus",
+        "results": [
+          "Achieved 99.99% uptime over 3 years",
+          "Increased network speed by 1000%",
+          "Reduced IT support tickets by 60%"
+        ]
+      }
+    },
+    {
+      "id": "mobile-surveillance",
+      "slug": "mobile-surveillance",
+      "title": "Mobile Surveillance Units",
+      "subtitle": "Rapid Deployment",
+      "description": "Rapid deployment surveillance systems designed for temporary installations and high-risk environment monitoring.",
+      "shortDescription": "Portable security solutions for any location",
+      "accent": "from-orange-400 to-orange-600",
+      "icon": "Truck",
+      "heroImage": "/images/services/mobile-surveillance-hero.jpg",
+      "gallery": [
+        "/images/services/mobile-1.jpg",
+        "/images/services/mobile-2.jpg",
+        "/images/services/mobile-3.jpg",
+        "/images/services/mobile-4.jpg"
+      ],
+      "features": [
+        {
+          "title": "Solar Power Systems",
+          "description": "Eco-friendly solar panels with battery backup for 24/7 operation",
+          "icon": "Sun"
+        },
+        {
+          "title": "4G/5G Connectivity",
+          "description": "High-speed cellular connections for real-time monitoring",
+          "icon": "Signal"
+        },
+        {
+          "title": "PTZ Cameras",
+          "description": "Pan-tilt-zoom cameras with night vision capabilities",
+          "icon": "RotateCcw"
+        },
+        {
+          "title": "Motion Detection",
+          "description": "AI-powered motion detection with instant alerts",
+          "icon": "Eye"
+        },
+        {
+          "title": "Weather Resistant",
+          "description": "IP66 rated equipment for harsh weather conditions",
+          "icon": "CloudRain"
+        },
+        {
+          "title": "Remote Access",
+          "description": "Live viewing and control from any device, anywhere",
+          "icon": "Smartphone"
+        }
+      ],
+      "benefits": [
+        "Deploy security in under 30 minutes",
+        "Monitor remote locations without power infrastructure",
+        "Deter crime with visible security presence",
+        "Reduce security guard costs by up to 70%"
+      ],
+      "specifications": {
+        "power": "Solar with 72-hour battery backup",
+        "connectivity": "4G/5G with WiFi hotspot capability",
+        "cameras": "4K PTZ with 40x optical zoom",
+        "storage": "Local and cloud recording options",
+        "deployment": "Trailer and pole-mounted options",
+        "monitoring": "24/7 remote monitoring available"
+      },
+      "caseStudy": {
+        "title": "Construction Site Security",
+        "description": "Deployed mobile units across 15 construction sites to prevent theft and vandalism",
+        "results": [
+          "95% reduction in theft incidents",
+          "Prevented $2M in equipment losses",
+          "Zero vandalism incidents during deployment"
+        ]
+      }
+    }
+  ]
+}
