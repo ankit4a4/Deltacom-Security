@@ -227,8 +227,7 @@ export default function Cybersecurity() {
               Proactive Cybersecurity Defense
             </h3>
             <p className="text-xl text-purple-100 leading-relaxed">
-              Don't wait for an attack to happen. Our comprehensive cybersecurity solutions 
-              provide proactive protection against evolving threats.
+              {`Don't wait for an attack to happen. Our comprehensive cybersecurity solutions provide proactive protection against evolving threats.`}
             </p>
           </div>
         </div>
@@ -322,17 +321,17 @@ export default function Cybersecurity() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="glass-dark rounded-2xl p-8">
+              <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8">
                 <Server className="h-12 w-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Infrastructure Design</h3>
                 <p className="text-gray-300">Secure network architecture and system design with scalability and security in mind.</p>
               </div>
-              <div className="glass-dark rounded-2xl p-8">
+              <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8">
                 <Network className="h-12 w-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Network Management</h3>
                 <p className="text-gray-300">Comprehensive network management with monitoring, maintenance, and optimization.</p>
               </div>
-              <div className="glass-dark rounded-2xl p-8">
+              <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8">
                 <Shield className="h-12 w-12 text-green-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Security Integration</h3>
                 <p className="text-gray-300">Security controls integrated throughout your IT infrastructure and operations.</p>
@@ -349,8 +348,7 @@ export default function Cybersecurity() {
             Secure Your Digital Assets Today
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Don't leave your business vulnerable to cyber attacks. Get a comprehensive 
-            security assessment and build robust defenses.
+            {`Don't leave your business vulnerable to cyber attacks. Get a comprehensive security assessment and build robust defenses.`}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

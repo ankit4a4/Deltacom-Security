@@ -151,7 +151,7 @@ const WhyChooseSection = () => {
           </div>
           
           <h2 className="text-5xl lg:text-7xl font-bold text-black/80 mb-6 leading-tight">
-            Why We're The
+           {`Why We're The`} 
             <br />
             <span className="bg-gradient-to-r from-black  to-black/70 bg-clip-text text-transparent">
               Right Choice
@@ -279,11 +279,7 @@ const WhyChooseSection = () => {
                 <div className={`absolute bottom-6 left-6 w-12 h-12 bg-gradient-to-r ${reasons[activeIndex].gradient} opacity-30 rounded-xl blur-lg transition-all duration-1000`}></div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-20">
+                    <div className="text-center mt-20">
           <div className="inline-flex items-center gap-2 text-gray-800 mb-6">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             <span className="text-sm">Ready to experience the difference?</span>
@@ -300,6 +296,11 @@ const WhyChooseSection = () => {
             </button>
           </div>
         </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+
       </div>
     </section>
   );

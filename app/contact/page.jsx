@@ -162,7 +162,7 @@ export default function Contact() {
               Get In Touch
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Multiple ways to reach us. Choose what's most convenient for you.
+              {`Multiple ways to reach us. Choose what's most convenient for you.`}
             </p>
           </div>
 
@@ -194,7 +194,7 @@ export default function Contact() {
               Request Your Free Consultation
             </h2>
             <p className="text-lg text-slate-600">
-              Fill out the form below and we'll contact you within 24 hours to discuss your security needs.
+              {`Fill out the form below and we'll contact you within 24 hours to discuss your security needs.`}
             </p>
           </div>
 
@@ -349,8 +349,7 @@ export default function Contact() {
                     Thank You for Your Request!
                   </h3>
                   <p className="text-lg text-slate-600 mb-6">
-                    We've received your consultation request and will contact you within 24 hours 
-                    to discuss your security needs.
+                    {`We've received your consultation request and will contact you within 24 hours to discuss your security needs.`}
                   </p>
                   <p className="text-sm text-slate-500">
                     For immediate assistance, call us at <strong>(202) 555-SECURITY</strong>
@@ -376,17 +375,17 @@ export default function Contact() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="glass-dark rounded-2xl p-8 text-center">
+              <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
                 <h3 className="text-xl font-bold text-white mb-3">Washington, DC</h3>
                 <p className="text-gray-300 mb-4">Federal agencies, commercial buildings, and urban businesses</p>
                 <div className="text-sm text-orange-400">✓ Government facilities</div>
               </div>
-              <div className="glass-dark rounded-2xl p-8 text-center">
+              <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
                 <h3 className="text-xl font-bold text-white mb-3">Northern Virginia</h3>
                 <p className="text-gray-300 mb-4">Tech companies, defense contractors, and corporate headquarters</p>
                 <div className="text-sm text-orange-400">✓ Corporate campuses</div>
               </div>
-              <div className="glass-dark rounded-2xl p-8 text-center">
+              <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
                 <h3 className="text-xl font-bold text-white mb-3">Maryland Suburbs</h3>
                 <p className="text-gray-300 mb-4">Government facilities, healthcare systems, and educational institutions</p>
                 <div className="text-sm text-orange-400">✓ Healthcare & education</div>
