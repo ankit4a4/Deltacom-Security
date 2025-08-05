@@ -240,7 +240,7 @@ export default function About() {
             Ready to Partner with Us?
           </h2>
           <p className="text-xl text-orange-100 mb-8">
-            Let's discuss how our experience and expertise can help secure your business.
+         {`  Let's discuss how our experience and expertise can help secure your business.`} 
           </p>
           <Link
             href="/contact"
