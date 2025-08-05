@@ -25,13 +25,21 @@ const Navigation = () => {
     setIsMenuOpen(false);
   }, [pathname]);
 
-  const navItems = [
+  // const navItems = [
+  //   { name: 'Home', href: '/' },
+  //   { name: 'About', href: '/about' },
+  //   { name: 'Commercial', href: '/commercial' },
+  //   { name: 'Fire Protection', href: '/fire' },
+  //   { name: 'Cyber Security', href: '/cybersecurity' },
+  //   { name: 'Contact', href: '/contact' },
+  // ];
+    const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Commercial', href: '/commercial' },
-    { name: 'Fire Protection', href: '/fire' },
-    { name: 'Cyber Security', href: '/cybersecurity' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'About', href: '/' },
+    { name: 'Commercial', href: '/' },
+    { name: 'Fire Protection', href: '/' },
+    { name: 'Cyber Security', href: '/' },
+    { name: 'Contact', href: '/' },
   ];
 
   return (
