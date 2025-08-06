@@ -3,12 +3,14 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { 
-  Building2, 
-  ShieldCheck, 
-  Camera, 
-  Key, 
-  Network, 
+import Image from 'next/image';
+import HeroImage from "../../public/images/commercial/HeroSectionIMage.jpg"
+import {
+  Building2,
+  ShieldCheck,
+  Camera,
+  Key,
+  Network,
   Flame,
   CheckCircle,
   ArrowRight,
@@ -28,7 +30,7 @@ export default function Commercial() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Page entrance animation
-      gsap.fromTo('.page-content', 
+      gsap.fromTo('.page-content',
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }
       );
@@ -135,26 +137,49 @@ export default function Commercial() {
   return (
     <div ref={containerRef} className="page-content">
       {/* Hero Section */}
-      <section className="pt-20 lg:pt-32 pb-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative mt-[115px] h-[400px] flex flex-col items-center justify-center ">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            width={100}
+            height={100}
+            src={HeroImage}
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Black Overlay */}
+          <div className="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+
+        {/* Content Wrapper */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Commercial</span> Security Solutions
+              <span className="">
+                Commercial
+              </span>{" "}
+              Security Solutions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-              Comprehensive security systems designed for businesses, government facilities, and commercial properties 
+              Comprehensive security systems designed for businesses, government facilities, and commercial properties
               throughout the Washington, DC Metro Area.
             </p>
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center"
+              className=" text-black bg-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center"
             >
-              Get Free Assessment
+              <span className='bg-gradient-to-r from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent'>
+                Get Free Assessment
+              </span>
               <ArrowRight className="ml-2 h-5 w-5" />
+
+
             </Link>
           </div>
         </div>
       </section>
+
+
 
       {/* Solutions Overview */}
       <section className="py-20 bg-white animate-sections">
@@ -164,7 +189,7 @@ export default function Commercial() {
               Complete Security Solutions
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              From video surveillance to cybersecurity, we provide integrated solutions 
+              From video surveillance to cybersecurity, we provide integrated solutions
               that protect your business comprehensively.
             </p>
           </div>
@@ -215,7 +240,7 @@ export default function Commercial() {
                 <div key={index} className="animate-section">
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                     <div className="flex items-start">
-                      <div className="p-3 bg-gradient-to-r from-orange-500 to-orange-700 rounded-2xl mr-6 flex-shrink-0">
+                      <div className="p-3 bg-[#396AE9] rounded-2xl mr-6 flex-shrink-0">
                         <IconComponent className="h-8 w-8 text-white" />
                       </div>
                       <div>
@@ -268,28 +293,28 @@ export default function Commercial() {
               Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
-              Our commercial installations have helped organizations improve security, reduce incidents, 
+              Our commercial installations have helped organizations improve security, reduce incidents,
               and ensure compliance across the Washington, DC Metro Area.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="glass-dark rounded-2xl p-8 text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent mb-2">
+                <div className="text-4xl font-bold text-white mb-2">
                   500+
                 </div>
-                <div className="text-gray-300 font-medium">Commercial Installations</div>
+                <div className="text-gray-400 font-medium">Commercial Installations</div>
               </div>
               <div className="glass-dark rounded-2xl p-8 text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-2">
+                <div className="text-4xl font-bold text-white mb-2">
                   99.9%
                 </div>
-                <div className="text-gray-300 font-medium">System Uptime</div>
+                <div className="text-gray-400 font-medium">System Uptime</div>
               </div>
               <div className="glass-dark rounded-2xl p-8 text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent mb-2">
+                <div className="text-4xl font-bold text-white mb-2">
                   24/7
                 </div>
-                <div className="text-gray-300 font-medium">Monitoring & Support</div>
+                <div className="text-gray-400 font-medium">Monitoring & Support</div>
               </div>
             </div>
           </div>
@@ -297,27 +322,33 @@ export default function Commercial() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-orange-700">
+      <section className="py-10 md:py-[120px] bg-white ">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
             Secure Your Commercial Property Today
           </h2>
-          <p className="text-xl text-orange-100 mb-8">
+          <p className="text-xl text-gray-600 mb-8">
             Let our experts design a comprehensive security solution tailored to your business needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-orange-600 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center"
+              className="bg-white border shadow-sm text-black px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center"
             >
-              Schedule Free Assessment
+              <span className='bg-gradient-to-r from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent'>
+                Schedule Free Assessment
+              </span>
+
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               href="/"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-orange-600 transition-all duration-300"
+              className="border hover:scale-105 text-black px-8 py-4 rounded-xl font-bold text-lg hover:bg-white  hover:shadow-2xl  transition-all duration-300"
             >
-              View All Services
+              <span className='bg-gradient-to-r  from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent'>
+                View All Services
+              </span>
+
             </Link>
           </div>
         </div>

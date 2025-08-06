@@ -25,36 +25,26 @@ const Navigation = () => {
     setIsMenuOpen(false);
   }, [pathname]);
 
-  // const navItems = [
-  //   { name: 'Home', href: '/' },
-  //   { name: 'About', href: '/about' },
-  //   { name: 'Commercial', href: '/commercial' },
-  //   { name: 'Fire Protection', href: '/fire' },
-  //   { name: 'Cyber Security', href: '/cybersecurity' },
-  //   { name: 'Contact', href: '/contact' },
-  // ];
-    const navItems = [
+  const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/' },
-    { name: 'Commercial', href: '/' },
-    { name: 'Fire Protection', href: '/' },
-    { name: 'Cyber Security', href: '/' },
-    { name: 'Contact', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Commercial', href: '/commercial' },
+    { name: 'Fire Protection', href: '/fire' },
+    { name: 'Cyber Security', href: '/cybersecurity' },
+    { name: 'Contact', href: '/contact' },
   ];
-
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/50' 
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/50'
           : 'bg-transparent'
-      }`}>
+        }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between p-6 lg:p-8">
-          
+
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className={`flex items-center justify-center w-20 h-12 rounded-2xl transition-all duration-300 group-hover:scale-105`}>
-            <img src='/images/logo.png'></img>
+              <img src='/images/logo.png'></img>
             </div>
 
           </Link>
@@ -65,11 +55,10 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative py-2 transition-all duration-300 group text-sm ${
-                  pathname === item.href
+                className={`relative py-2 transition-all duration-300 group text-sm ${pathname === item.href
                     ? scrolled ? 'text-gray-900 font-semibold' : 'text-gray-900 font-semibold'
                     : scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-gray-600 hover:text-gray-900'
-                }`}
+                  }`}
               >
                 {item.name}
                 {pathname === item.href && (
@@ -83,20 +72,18 @@ const Navigation = () => {
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center gap-6">
             <div className="flex flex-col items-start gap-2 text-sm">
-              <a 
-                href="mailto:info@deltacomsecurity.com" 
-                className={`flex items-center gap-2 transition-colors duration-300 ${
-                  scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-gray-600 hover:text-gray-900'
-                }`}
+              <a
+                href="mailto:info@deltacomsecurity.com"
+                className={`flex items-center gap-2 transition-colors duration-300 ${scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-gray-600 hover:text-gray-900'
+                  }`}
               >
                 <Mail className="w-4 h-4" />
                 <span className="hidden xl:inline">info@deltacomsecurity.com</span>
               </a>
-              <a 
-                href="tel:+12025551234" 
-                className={`flex items-center gap-2 transition-colors duration-300 ${
-                  scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-gray-600 hover:text-gray-900'
-                }`}
+              <a
+                href="tel:+12025551234"
+                className={`flex items-center gap-2 transition-colors duration-300 ${scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-gray-600 hover:text-gray-900'
+                  }`}
               >
                 <Phone className="w-4 h-4" />
                 <span className="hidden xl:inline">(202) 555-1234</span>
@@ -113,9 +100,8 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`lg:hidden flex items-center justify-center w-12 h-12 rounded-2xl transition-all duration-300 ${
-              scrolled ? 'bg-gray-900 hover:bg-gray-800' : 'bg-gray-900 hover:bg-gray-800'
-            }`}
+            className={`lg:hidden flex items-center justify-center w-12 h-12 rounded-2xl transition-all duration-300 ${scrolled ? 'bg-gray-900 hover:bg-gray-800' : 'bg-gray-900 hover:bg-gray-800'
+              }`}
           >
             {isMenuOpen ? (
               <X className="w-6 h-6 text-white" />
@@ -127,18 +113,16 @@ const Navigation = () => {
       </nav>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 z-40 transition-all duration-300 lg:hidden ${
-        isMenuOpen 
-          ? 'opacity-100 pointer-events-auto' 
+      <div className={`fixed inset-0 z-40 transition-all duration-300 lg:hidden ${isMenuOpen
+          ? 'opacity-100 pointer-events-auto'
           : 'opacity-0 pointer-events-none'
-      }`}>
-        <div className="absolute inset-0 bg-gray-900/95 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
-        
-        <div className={`absolute top-0 right-0 h-full w-80 max-w-[90vw] bg-white shadow-2xl transform transition-transform duration-300 ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
+        <div className="absolute inset-0 bg-gray-900/95 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
+
+        <div className={`absolute top-0 right-0 h-full w-80 max-w-[90vw] bg-white shadow-2xl transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}>
           <div className="flex flex-col h-full">
-            
+
             {/* Mobile Menu Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-200">
               <div className="flex items-center gap-3">
@@ -165,11 +149,10 @@ const Navigation = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`block py-3 px-4 rounded-xl transition-all duration-300 ${
-                      pathname === item.href
+                    className={`block py-3 px-4 rounded-xl transition-all duration-300 ${pathname === item.href
                         ? 'bg-gray-900 text-white font-semibold'
                         : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
-                    }`}
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -180,14 +163,14 @@ const Navigation = () => {
             {/* Mobile Menu Footer */}
             <div className="p-6 border-t border-gray-200 space-y-4">
               <div className="space-y-3">
-                <a 
+                <a
                   href="mailto:info@deltacomsecurity.com"
                   className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   <Mail className="w-5 h-5" />
                   <span>info@deltacomsecurity.com</span>
                 </a>
-                <a 
+                <a
                   href="tel:+12025551234"
                   className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors"
                 >

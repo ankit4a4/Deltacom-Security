@@ -3,11 +3,13 @@
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
+import Image from 'next/image';
+import HeroImage from "../../public/images/contact/conatct.jpg"
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
   CheckCircle,
   ArrowRight,
   Shield,
@@ -36,7 +38,7 @@ export default function Contact() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Page entrance animation
-      gsap.fromTo('.page-content', 
+      gsap.fromTo('.page-content',
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }
       );
@@ -71,13 +73,13 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
+
     // Reset form after success message
     setTimeout(() => {
       setIsSubmitted(false);
@@ -136,23 +138,40 @@ export default function Contact() {
   return (
     <div ref={containerRef} className="page-content">
       {/* Hero Section */}
-      <section className="pt-20 lg:pt-32 pb-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative md:mt-[120px] mt-20 py-20">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            height={100}
+            width={100}
+            src={HeroImage}
+            alt="Security Consultation Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Black Overlay */}
+          <div className="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              Get Your <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Free</span> Security Consultation
+              Get Your <span className="text-white">Free</span> Security Consultation
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8">
-              Ready to secure your business? Contact our security experts for a comprehensive assessment 
+              Ready to secure your business? Contact our security experts for a comprehensive assessment
               and customized solution designed specifically for your needs.
             </p>
-            <div className="inline-flex items-center bg-orange-500/20 backdrop-blur-sm border border-orange-400/30 rounded-full px-6 py-3">
-              <Shield className="h-5 w-5 text-orange-300 mr-2" />
-              <span className="text-orange-200 font-medium">Trusted by 1000+ Clients</span>
+
+            {/* Badge */}
+            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-3">
+              <Shield className="h-5 w-5 text-white mr-2" />
+              <span className="text-white font-medium">Trusted by 1000+ Clients</span>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Contact Information */}
       <section className="py-20 bg-white animate-sections">
@@ -172,7 +191,7 @@ export default function Contact() {
               return (
                 <div key={index} className="animate-section">
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center h-full">
-                    <div className={`p-4 bg-gradient-to-r ${info.gradient} rounded-2xl inline-flex mb-6`}>
+                    <div className={`p-4 bg-[#427DF6] rounded-2xl inline-flex mb-6`}>
                       <IconComponent className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">{info.title}</h3>
@@ -217,7 +236,7 @@ export default function Contact() {
                           required
                           value={formData.name}
                           onChange={handleInputChange}
-                          className="w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors"
+                          className="w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl  focus:outline-none transition-colors"
                           placeholder="John Doe"
                         />
                       </div>
@@ -237,7 +256,7 @@ export default function Contact() {
                           required
                           value={formData.email}
                           onChange={handleInputChange}
-                          className="w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors"
+                          className="w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl  focus:outline-none transition-colors"
                           placeholder="john@company.com"
                         />
                       </div>
@@ -256,7 +275,7 @@ export default function Contact() {
                           name="company"
                           value={formData.company}
                           onChange={handleInputChange}
-                          className="w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors"
+                          className="w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl  focus:outline-none transition-colors"
                           placeholder="Company Name"
                         />
                       </div>
@@ -275,7 +294,7 @@ export default function Contact() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors"
+                          className="w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl  focus:outline-none transition-colors"
                           placeholder="(555) 123-4567"
                         />
                       </div>
@@ -292,7 +311,7 @@ export default function Contact() {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors bg-white"
+                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl  focus:outline-none transition-colors bg-white"
                     >
                       <option value="">Select a service...</option>
                       {services.map((service, index) => (
@@ -314,7 +333,7 @@ export default function Contact() {
                         rows="5"
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl focus:border-orange-500 focus:outline-none transition-colors resize-none"
+                        className="w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl  focus:outline-none transition-colors resize-none"
                         placeholder="Tell us about your security needs, facility size, timeline, or any specific requirements..."
                       ></textarea>
                     </div>
@@ -325,19 +344,16 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="bg-white text-black border border-gray-100 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {isSubmitting ? (
-                        <>
-                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          Send My Request
-                          <ArrowRight className="ml-2 h-5 w-5" />
-                        </>
-                      )}
+
+                      <span className='bg-gradient-to-r from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent'>
+                        Submit
+                      </span>
+
+
+                      <ArrowRight className="ml-2 h-5 w-5" />
+
                     </button>
                   </div>
                 </form>
@@ -365,12 +381,12 @@ export default function Contact() {
       <section className="py-20 bg-slate-900 animate-sections">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-section">
-            <MapPin className="h-16 w-16 text-orange-400 mx-auto mb-6" />
+            <MapPin className="h-16 w-16 text-[#427DF6] mx-auto mb-6" />
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Serving the Washington, DC Metro Area
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
-              We provide comprehensive security solutions throughout the greater Washington area, 
+              We provide comprehensive security solutions throughout the greater Washington area,
               including the District, Northern Virginia, and Maryland suburbs.
             </p>
 
@@ -378,17 +394,17 @@ export default function Contact() {
               <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
                 <h3 className="text-xl font-bold text-white mb-3">Washington, DC</h3>
                 <p className="text-gray-300 mb-4">Federal agencies, commercial buildings, and urban businesses</p>
-                <div className="text-sm text-orange-400">✓ Government facilities</div>
+                <div className="text-sm text-[#427DF6]">✓ Government facilities</div>
               </div>
               <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
                 <h3 className="text-xl font-bold text-white mb-3">Northern Virginia</h3>
                 <p className="text-gray-300 mb-4">Tech companies, defense contractors, and corporate headquarters</p>
-                <div className="text-sm text-orange-400">✓ Corporate campuses</div>
+                <div className="text-sm text-[#427DF6]">✓ Corporate campuses</div>
               </div>
               <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
                 <h3 className="text-xl font-bold text-white mb-3">Maryland Suburbs</h3>
                 <p className="text-gray-300 mb-4">Government facilities, healthcare systems, and educational institutions</p>
-                <div className="text-sm text-orange-400">✓ Healthcare & education</div>
+                <div className="text-sm text-[#427DF6]">✓ Healthcare & education</div>
               </div>
             </div>
           </div>
@@ -396,20 +412,23 @@ export default function Contact() {
       </section>
 
       {/* Emergency Contact */}
-      <section className="py-16 bg-gradient-to-r from-red-600 to-orange-600">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl lg:text-3xl font-bold text-black mb-4">
             Need Emergency Security Support?
           </h2>
-          <p className="text-lg text-red-100 mb-6">
+          <p className="text-lg text-gray-700 mb-6">
             Our emergency support team is available 24/7 for existing clients experiencing security system issues.
           </p>
           <a
             href="tel:+12025555555"
-            className="bg-white text-red-600 px-8 py-3 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center"
+            className="bg-white border border-gray-100 text-black px-8 py-3 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center"
           >
             <Phone className="mr-2 h-5 w-5" />
-            Call Emergency Support
+            <span className='bg-gradient-to-r from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent'>
+              Call Emergency Support
+            </span>
+
           </a>
         </div>
       </section>

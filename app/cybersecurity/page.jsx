@@ -3,10 +3,10 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
+import {
+  Shield,
+  Lock,
+  Eye,
   AlertTriangle,
   CheckCircle,
   ArrowRight,
@@ -18,6 +18,8 @@ import {
   FileSearch
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import HeroImage from "../../public/images/cyber/banner.jpg"
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -29,7 +31,7 @@ export default function Cybersecurity() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Page entrance animation
-      gsap.fromTo('.page-content', 
+      gsap.fromTo('.page-content',
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }
       );
@@ -168,65 +170,90 @@ export default function Cybersecurity() {
   return (
     <div ref={containerRef} className="page-content">
       {/* Hero Section */}
-      <section className="pt-20 lg:pt-32 pb-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative md:mt-[120px] mt-20 py-20">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            height={100}
+            width={100}
+            src={HeroImage}
+            alt="Cybersecurity Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Black Overlay */}
+          <div className="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center bg-purple-500/20 backdrop-blur-sm border border-purple-400/30 rounded-full px-6 py-3 mb-6">
-              <AlertTriangle className="h-5 w-5 text-purple-300 mr-2" />
-              <span className="text-purple-200 font-medium">Cyber Threats Are Increasing</span>
+            {/* Badge */}
+            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-3 mb-6">
+              <AlertTriangle className="h-5 w-5 text-white mr-2" />
+              <span className="text-white font-medium">Cyber Threats Are Increasing</span>
             </div>
+
+            {/* Heading */}
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Cybersecurity</span> & IT Services
+              <span className="text-white">Cybersecurity</span> & IT Services
             </h1>
+
+            {/* Paragraph */}
             <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8">
-              Comprehensive cybersecurity solutions including network security, endpoint protection, 
+              Comprehensive cybersecurity solutions including network security, endpoint protection,
               and IT infrastructure services designed to protect your digital assets and operations.
             </p>
+
+            {/* Button */}
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center"
+              className="bg-white text-black px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300 inline-flex items-center"
             >
-              Get Security Assessment
+              <span className='bg-gradient-to-r from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent'>
+                Get Security Assessment
+              </span>
+
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
         </div>
       </section>
 
+
       {/* Threat Landscape */}
       <section className="py-20 bg-white animate-sections">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-section">
-            <Shield className="h-16 w-16 text-red-500 mx-auto mb-6" />
+            <Shield className="h-16 w-16 text-[#427DF6] mx-auto mb-6" />
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
               The Cyber Threat Landscape
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-12">
-              Cyber threats are constantly evolving and becoming more sophisticated. 
+              Cyber threats are constantly evolving and becoming more sophisticated.
               Understanding the risks is the first step in building effective defenses.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {threats.map((threat, index) => (
                 <div key={index} className="animate-section">
-                  <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 text-center">
-                    <div className="text-3xl lg:text-4xl font-bold text-red-600 mb-2">
+                  <div className=" border border-gray-100 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 text-center">
+                    <div className="text-3xl lg:text-4xl font-bold text-black mb-2">
                       {threat.percentage}
                     </div>
-                    <div className="text-lg font-semibold text-red-700 mb-2">{threat.name}</div>
-                    <div className="text-sm text-slate-600">{threat.description}</div>
+                    <div className="text-lg font-semibold text-gray-700 mb-2">{threat.name}</div>
+                    <div className="text-sm text-gray-500">{threat.description}</div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="animate-section bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-8 lg:p-12 text-center text-white">
+          <div className="animate-section bg-[#0F172A] rounded-3xl p-8 lg:p-12 text-center text-white">
             <Lock className="h-16 w-16 mx-auto mb-6 text-purple-200" />
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">
               Proactive Cybersecurity Defense
             </h3>
-            <p className="text-xl text-purple-100 leading-relaxed">
+            <p className="text-xl text-gray-300 leading-relaxed">
               {`Don't wait for an attack to happen. Our comprehensive cybersecurity solutions provide proactive protection against evolving threats.`}
             </p>
           </div>
@@ -234,14 +261,14 @@ export default function Cybersecurity() {
       </section>
 
       {/* Cybersecurity Services */}
-      <section className="py-20 bg-slate-50 animate-sections">
+      <section className="py-10 bg-slate-50 animate-sections">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-section">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
               Comprehensive Cybersecurity Services
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Multi-layered security approach covering all aspects of your digital infrastructure 
+              Multi-layered security approach covering all aspects of your digital infrastructure
               and business operations.
             </p>
           </div>
@@ -281,7 +308,7 @@ export default function Cybersecurity() {
               Industry-Specific Cybersecurity
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Tailored cybersecurity solutions that meet the unique compliance requirements 
+              Tailored cybersecurity solutions that meet the unique compliance requirements
               and security challenges of different industries.
             </p>
           </div>
@@ -311,28 +338,28 @@ export default function Cybersecurity() {
       <section className="py-20 bg-slate-900 animate-sections">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-section">
-            <Globe className="h-16 w-16 text-blue-400 mx-auto mb-6" />
+            <Globe className="h-16 w-16 text-[#427DF6] mx-auto mb-6" />
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               IT Infrastructure Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
-              Complete IT infrastructure design, deployment, and management services 
+              Complete IT infrastructure design, deployment, and management services
               with security built in from the ground up.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8">
-                <Server className="h-12 w-12 text-blue-400 mb-4" />
+                <Server className="h-12 w-12 text-[#427DF6] mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Infrastructure Design</h3>
                 <p className="text-gray-300">Secure network architecture and system design with scalability and security in mind.</p>
               </div>
               <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8">
-                <Network className="h-12 w-12 text-purple-400 mb-4" />
+                <Network className="h-12 w-12 text-[#427DF6] mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Network Management</h3>
                 <p className="text-gray-300">Comprehensive network management with monitoring, maintenance, and optimization.</p>
               </div>
               <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8">
-                <Shield className="h-12 w-12 text-green-400 mb-4" />
+                <Shield className="h-12 w-12 text-[#427DF6] mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Security Integration</h3>
                 <p className="text-gray-300">Security controls integrated throughout your IT infrastructure and operations.</p>
               </div>
@@ -342,27 +369,33 @@ export default function Cybersecurity() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
+      <section className="py-20 bg-[white]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
             Secure Your Digital Assets Today
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-gray-700 mb-8">
             {`Don't leave your business vulnerable to cyber attacks. Get a comprehensive security assessment and build robust defenses.`}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center"
+              className=" px-8 border border-gary-100 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center"
             >
-              Schedule Security Assessment
+              <span className='bg-gradient-to-r from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent'>
+                Schedule Security Assessment
+              </span>
+
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               href="/"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
+              className="border border-gary-100  hover:shadow-2xl hover:scale-105 transition-all duration-300 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-whi transition-all duration-300"
             >
-              View All Services
+              <span className='bg-gradient-to-r from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent'>
+                View All Services
+              </span>
+
             </Link>
           </div>
         </div>
