@@ -31,8 +31,8 @@ const Navigation = () => {
     { name: 'About', href: '/about' },
     { name: 'Commercial', href: '/commercial' },
     { name: 'Fire Protection', href: '/fire' },
-    { name: 'Cyber Security', href: '/cybersecurity' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Cyber Security', href: '/' },
+    { name: 'Contact', href: '/' },
   ];
   return (
     <>

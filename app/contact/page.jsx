@@ -217,12 +217,11 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="animate-section">
+          {/* <div className="animate-section">
             <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12">
               {!isSubmitted ? (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Name */}
                     <div>
                       <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
                         Full Name *
@@ -242,7 +241,6 @@ export default function Contact() {
                       </div>
                     </div>
 
-                    {/* Email */}
                     <div>
                       <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
                         Email Address *
@@ -262,7 +260,6 @@ export default function Contact() {
                       </div>
                     </div>
 
-                    {/* Company */}
                     <div>
                       <label htmlFor="company" className="block text-sm font-semibold text-slate-700 mb-2">
                         Company / Organization
@@ -281,7 +278,6 @@ export default function Contact() {
                       </div>
                     </div>
 
-                    {/* Phone */}
                     <div>
                       <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-2">
                         Phone Number
@@ -301,7 +297,6 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Service Interest */}
                   <div>
                     <label htmlFor="service" className="block text-sm font-semibold text-slate-700 mb-2">
                       Service Interest
@@ -320,7 +315,6 @@ export default function Contact() {
                     </select>
                   </div>
 
-                  {/* Message */}
                   <div>
                     <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
                       Message / Project Details
@@ -339,7 +333,6 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Submit Button */}
                   <div className="text-center">
                     <button
                       type="submit"
@@ -358,7 +351,6 @@ export default function Contact() {
                   </div>
                 </form>
               ) : (
-                // Success Message
                 <div className="text-center py-12">
                   <CheckCircle className="h-20 w-20 text-green-500 mx-auto mb-6" />
                   <h3 className="text-2xl font-bold text-slate-900 mb-4">
@@ -373,12 +365,12 @@ export default function Contact() {
                 </div>
               )}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Service Area Map */}
-      <section className="py-20 bg-slate-900 animate-sections">
+      {/* <section className="py-20 bg-slate-900 animate-sections">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-section">
             <MapPin className="h-16 w-16 text-[#427DF6] mx-auto mb-6" />
@@ -409,10 +401,10 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Emergency Contact */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold text-black mb-4">
             Need Emergency Security Support?
@@ -431,7 +423,7 @@ export default function Contact() {
 
           </a>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
