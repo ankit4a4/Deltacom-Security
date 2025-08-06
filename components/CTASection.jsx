@@ -82,7 +82,7 @@ const CTASection = () => {
             <p className="text-black/80 mb-4">Trusted by Government Agencies & Fortune 500 Companies</p>
             <div className="flex flex-wrap justify-center gap-8 text-black/60 text-sm">
               <span>✓ Licensed & Insured</span>
-              <span>✓ 10+ Years Experience</span>
+              <span>✓ 25+ Years Experience</span>
               <span>✓ 24/7 Support</span>
               <span>✓ Free Assessments</span>
             </div>

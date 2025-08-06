@@ -67,8 +67,12 @@ export default function About() {
   ];
 
   const milestones = [
-    { year: '2014', event: 'Deltacom Security Founded' },
-    { year: '2016', event: 'First Government Contract Awarded' },
+    { year: '2000', event: 'Deltacom Security Founded' },
+    { year: '2003', event: 'Secured First Major Residential Contract' },
+    { year: '2007', event: 'Expanded Services Across Virginia & Maryland' },
+    { year: '2010', event: 'Achieved 100+ Successful Installations' },
+    { year: '2014', event: 'Awarded First Government Security Contract' },
+    { year: '2016', event: 'Launched Smart Home Security Solutions' },
     { year: '2018', event: 'Expanded to Cybersecurity Services' },
     { year: '2020', event: '500+ Installations Completed' },
     { year: '2022', event: 'Added Fire Protection Systems' },
@@ -239,11 +243,11 @@ export default function About() {
                 <p className="text-gray-300">Federal agencies, commercial buildings, and urban businesses</p>
               </div>
               <div className="glass-dark rounded-2xl p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Northern Virginia</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Virginia</h3>
                 <p className="text-gray-300">Tech companies, defense contractors, and corporate headquarters</p>
               </div>
               <div className="glass-dark rounded-2xl p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Maryland Suburbs</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Maryland</h3>
                 <p className="text-gray-300">Government facilities, healthcare systems, and educational institutions</p>
               </div>
             </div>

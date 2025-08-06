@@ -86,7 +86,7 @@ export default function HeroSection() {
   return (
     <section
       ref={heroRef}
-      className="relative mt-24 min-h-screen overflow-hidden"
+      className="relative mt-24 py-10 overflow-hidden"
     >
       {/* Swiper Background Images */}
       <div className="absolute inset-0 z-0">
@@ -180,8 +180,7 @@ export default function HeroSection() {
                 ref={subheadingRef}
                 className="text-lg lg:text-xl text-gray-200 max-w-lg leading-relaxed"
               >
-                Protecting the Washington, DC Metro Area with smart, end-to-end
-                security solutions that safeguard your people, property, and
+                Protecting the Washington, Washington DC, Maryland, and Virginia with smart, end-to-end security solutions that safeguard your people, property, and
                 operations.
               </p>
             </div>
@@ -208,7 +207,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Content - Floating Card */}
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="relative hidden md:flex justify-center lg:justify-end ">
             <div
               ref={cardRef}
               className="relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/50 max-w-sm w-full"

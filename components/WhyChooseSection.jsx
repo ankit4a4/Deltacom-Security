@@ -159,7 +159,7 @@ const WhyChooseSection = () => {
           </h2>
           
           <p className="text-xl text-gray-800 max-w-3xl mx-auto leading-relaxed">
-            Six compelling reasons why businesses across the DC Metro Area trust us with their security
+           Six compelling reasons why small businesses, enterprises, and government agencies across the DC Metro Area trust us with their security
           </p>
         </div>
 
