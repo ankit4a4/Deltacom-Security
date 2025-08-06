@@ -174,7 +174,7 @@ export default function Contact() {
 
 
       {/* Contact Information */}
-      <section className="py-20 bg-white animate-sections">
+      {/* <section className="py-20 bg-white animate-sections">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-section">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
@@ -203,19 +203,19 @@ export default function Contact() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Form */}
       <section className="py-20 bg-slate-50 animate-sections">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-section">
+          {/* <div className="text-center mb-12 animate-section">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
               Request Your Free Consultation
             </h2>
             <p className="text-lg text-slate-600">
               {`Fill out the form below and we'll contact you within 24 hours to discuss your security needs.`}
             </p>
-          </div>
+          </div> */}
 
           {/* <div className="animate-section">
             <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12">
