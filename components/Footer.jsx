@@ -4,11 +4,11 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
-import { 
-  Shield, 
-  Phone, 
-  Mail, 
-  MapPin, 
+import {
+  Shield,
+  Phone,
+  Mail,
+  MapPin,
   ExternalLink,
   ArrowRight,
   Linkedin,
@@ -77,7 +77,7 @@ const Footer = () => {
     <footer ref={footerRef} className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-      
+
       {/* Floating Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 right-20 w-64 h-64 rounded-full border border-white/5 bg-gradient-to-br from-blue-500/5 to-purple-500/5 backdrop-blur-3xl"></div>
@@ -85,30 +85,29 @@ const Footer = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Main Footer Content */}
         <div ref={contentRef} className="py-16 lg:py-20">
-          
+
           {/* Top Section */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
-            
+
             {/* Company Info */}
             <div className="lg:col-span-4 space-y-6">
               <div className="flex items-center gap-3">
                 <div className=" rounded-xl">
-                 <img src='/images/logo.png' className='w-20'></img>
+                  <img src='/images/logo.png' className='w-20'></img>
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Deltacom Security</h3>
                   <p className="text-gray-400 text-sm">Washington, DC Metro Area</p>
                 </div>
               </div>
-              
+
               <p className="text-gray-300 leading-relaxed">
-                The most reliable security system provider in the Washington, DC Metro Area. 
-                We deliver smart, end-to-end security and IT solutions that protect what matters most.
+                Serving Washington DC, Maryland, Virginia, and across the USA, your most trusted provider of end-to-end smart security and IT solutions, protecting what matters most to your business.
               </p>
-              
+
               {/* CTA Button */}
               <Link
                 href="/contact"
@@ -157,7 +156,7 @@ const Footer = () => {
             <div className="lg:col-span-3">
               <h4 className="text-lg font-semibold text-white mb-6">Get In Touch</h4>
               <div className="space-y-4">
-                
+
                 {/* Address */}
                 <div className="flex items-start gap-3">
                   <div className="p-2 bg-white/5 rounded-lg">
@@ -222,7 +221,7 @@ const Footer = () => {
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            
+
             {/* Copyright */}
             <div className="text-gray-400 text-sm text-center md:text-left">
               <p>&copy; {new Date().getFullYear()} Deltacom Security. All rights reserved.</p>

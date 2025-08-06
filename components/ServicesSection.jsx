@@ -122,7 +122,7 @@ const ServicesSection = () => {
               scrollTrigger: {
                 trigger: servicesRef.current,
                 start: "top 80%",
-                once: true, // Run only once
+                once: true, 
               },
             }
           );
@@ -130,7 +130,6 @@ const ServicesSection = () => {
       }, sectionRef);
     };
 
-    // Use requestAnimationFrame for better performance
     requestAnimationFrame(initAnimations);
 
     return () => {

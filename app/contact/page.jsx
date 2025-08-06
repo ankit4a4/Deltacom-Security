@@ -387,7 +387,7 @@ export default function Contact() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
               We provide comprehensive security solutions throughout the greater Washington area,
-              including the District, Northern Virginia, and Maryland suburbs.
+              including the District, Virginia, and Maryland.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -397,12 +397,12 @@ export default function Contact() {
                 <div className="text-sm text-[#427DF6]">✓ Government facilities</div>
               </div>
               <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
-                <h3 className="text-xl font-bold text-white mb-3">Northern Virginia</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Virginia</h3>
                 <p className="text-gray-300 mb-4">Tech companies, defense contractors, and corporate headquarters</p>
                 <div className="text-sm text-[#427DF6]">✓ Corporate campuses</div>
               </div>
               <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
-                <h3 className="text-xl font-bold text-white mb-3">Maryland Suburbs</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Maryland</h3>
                 <p className="text-gray-300 mb-4">Government facilities, healthcare systems, and educational institutions</p>
                 <div className="text-sm text-[#427DF6]">✓ Healthcare & education</div>
               </div>
