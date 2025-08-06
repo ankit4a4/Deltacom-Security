@@ -25,6 +25,7 @@ const Navigation = () => {
     setIsMenuOpen(false);
   }, [pathname]);
 
+  
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
