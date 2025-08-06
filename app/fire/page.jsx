@@ -3,10 +3,12 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { 
-  Flame, 
-  Clock, 
-  ShieldAlert, 
+import Image from 'next/image';
+import HeroImage from "../../public/images/fire/1.webp"
+import {
+  Flame,
+  Clock,
+  ShieldAlert,
   AlertTriangle,
   CheckCircle,
   ArrowRight,
@@ -27,7 +29,7 @@ export default function FireProtection() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Page entrance animation
-      gsap.fromTo('.page-content', 
+      gsap.fromTo('.page-content',
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }
       );
@@ -122,7 +124,7 @@ export default function FireProtection() {
     {
       title: 'Industrial Facilities',
       description: 'Specialized fire suppression for manufacturing, warehousing, and industrial operations.',
-      icon: '🏭' 
+      icon: '🏭'
     },
     {
       title: 'Healthcare Facilities',
@@ -149,36 +151,64 @@ export default function FireProtection() {
   return (
     <div ref={containerRef} className="page-content">
       {/* Hero Section */}
-      <section className="pt-20 lg:pt-32 pb-16 bg-gradient-to-br from-red-900 via-orange-900 to-red-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative mt-20 md:mt-[120px]   py-20">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            height={100}
+            width={100}
+            src={HeroImage}
+            alt="Fire Protection Background"
+            className="w-full h-full object-cover "
+          />
+          {/* Black Overlay */}
+          <div className="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center bg-red-500/20 backdrop-blur-sm border border-red-400/30 rounded-full px-6 py-3 mb-6">
-              <AlertTriangle className="h-5 w-5 text-orange-300 mr-2" />
-              <span className="text-orange-200 font-medium">Critical Life Safety Systems</span>
+            {/* Badge */}
+            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-3 mb-6">
+              <AlertTriangle className="h-5 w-5 text-orange-200 mr-2" />
+              <span className="text-orange-100 font-medium">Critical Life Safety Systems</span>
             </div>
+
+            {/* Heading */}
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-orange-300 to-red-300 bg-clip-text text-transparent">Fire Protection</span> Systems
+              <span >
+                Fire Protection
+              </span>{" "}
+              Systems
             </h1>
+
+            {/* Paragraph */}
             <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8">
-              Because fire doubles in size every minute, rapid detection and response can mean the difference 
+              Because fire doubles in size every minute, rapid detection and response can mean the difference
               between a minor incident and a catastrophic loss. Our fire protection systems provide critical timing advantages.
             </p>
+
+            {/* Button */}
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center"
+              className="bg-white border border-gray-300 px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center"
             >
-              Get Fire Safety Assessment
+              <span className='bg-gradient-to-r from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent'>
+                Get Fire Safety Assessment
+              </span>
+
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
         </div>
       </section>
 
+
       {/* Critical Timing Section */}
       <section className="py-20 bg-white animate-sections">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-section">
-            <Clock className="h-16 w-16 text-red-500 mx-auto mb-6" />
+            <Clock className="h-16 w-16 text-[#427DF6] mx-auto mb-6" />
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
               Every Second Counts
             </h2>
@@ -189,11 +219,11 @@ export default function FireProtection() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {fireStats.map((stat, index) => (
                 <div key={index} className="animate-section">
-                  <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
-                    <div className="text-4xl lg:text-5xl font-bold text-red-600 mb-2">
+                  <div className=" border-2  rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+                    <div className="text-4xl lg:text-5xl font-bold text-[#427DF6] mb-2">
                       {stat.number}
                     </div>
-                    <div className="text-lg font-semibold text-red-700 mb-3">{stat.unit}</div>
+                    <div className="text-lg font-semibold text-[#000] mb-3">{stat.unit}</div>
                     <div className="text-slate-600">{stat.description}</div>
                   </div>
                 </div>
@@ -201,13 +231,13 @@ export default function FireProtection() {
             </div>
           </div>
 
-          <div className="animate-section bg-gradient-to-r from-red-600 to-orange-600 rounded-3xl p-8 lg:p-12 text-center text-white">
+          <div className="animate-section bg-[#0F172A] rounded-3xl p-8 lg:p-12 text-center text-white">
             <ShieldAlert className="h-16 w-16 mx-auto mb-6 text-orange-200" />
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">
               Rapid Response Fire Protection
             </h3>
-            <p className="text-xl text-red-100 leading-relaxed">
-              Our fire protection systems are designed for the fastest possible detection and response, 
+            <p className="text-xl text-gray-400 leading-relaxed">
+              Our fire protection systems are designed for the fastest possible detection and response,
               giving you precious extra seconds to save lives and protect property.
             </p>
           </div>
@@ -222,7 +252,7 @@ export default function FireProtection() {
               Comprehensive Fire Protection Systems
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              From detection to suppression, our integrated fire protection solutions provide complete coverage 
+              From detection to suppression, our integrated fire protection solutions provide complete coverage
               and peace of mind for your facility.
             </p>
           </div>
@@ -233,7 +263,7 @@ export default function FireProtection() {
               return (
                 <div key={index} className="animate-section">
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                    <div className="p-3 bg-gradient-to-r from-red-500 to-orange-600 rounded-2xl inline-flex mb-6">
+                    <div className="p-3 bg-[#427DF6] rounded-2xl inline-flex mb-6">
                       <IconComponent className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-4">{system.title}</h3>
@@ -284,30 +314,30 @@ export default function FireProtection() {
       <section className="py-20 bg-slate-900 animate-sections">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-section">
-            <Flame className="h-16 w-16 text-orange-400 mx-auto mb-6" />
+            <Flame className="h-16 w-16 text-[#427DF6] mx-auto mb-6" />
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Code Compliance & Certification
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
-              All our fire protection installations meet or exceed local fire codes and NFPA standards, 
+              All our fire protection installations meet or exceed local fire codes and NFPA standards,
               ensuring your facility is fully compliant and properly protected.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="glass-dark rounded-2xl p-6 text-center">
-                <div className="text-2xl font-bold text-orange-400 mb-2">NFPA</div>
+                <div className="text-2xl font-bold text-white mb-2">NFPA</div>
                 <div className="text-gray-300 text-sm">Standards Compliant</div>
               </div>
               <div className="glass-dark rounded-2xl p-6 text-center">
-                <div className="text-2xl font-bold text-red-400 mb-2">Local</div>
+                <div className="text-2xl font-bold text-white mb-2">Local</div>
                 <div className="text-gray-300 text-sm">Fire Code Compliance</div>
               </div>
               <div className="glass-dark rounded-2xl p-6 text-center">
-                <div className="text-2xl font-bold text-orange-400 mb-2">UL</div>
+                <div className="text-2xl font-bold text-white mb-2">UL</div>
                 <div className="text-gray-300 text-sm">Listed Equipment</div>
               </div>
               <div className="glass-dark rounded-2xl p-6 text-center">
-                <div className="text-2xl font-bold text-red-400 mb-2">ADA</div>
+                <div className="text-2xl font-bold text-white mb-2">ADA</div>
                 <div className="text-gray-300 text-sm">Accessibility Compliant</div>
               </div>
             </div>
@@ -316,28 +346,34 @@ export default function FireProtection() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
+      <section className="md:py-[100px] py-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-           {`Don't Wait - Fire Won't Wait`}
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
+            {`Don't Wait - Fire Won't Wait`}
           </h2>
-          <p className="text-xl text-red-100 mb-8">
-            Every facility needs proper fire protection. Get a professional assessment 
+          <p className="text-xl text-gray-600 mb-8">
+            Every facility needs proper fire protection. Get a professional assessment
             and ensure your people and property are protected.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-red-600 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center"
+              className="bg-white text-[#427DF6] px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center border border-gray-200 shadow-md"
             >
-              Schedule Fire Safety Assessment
+              <span className='bg-gradient-to-r  from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent'>
+                Schedule Fire Safety Assessment
+              </span>
+
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               href="/"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-red-600 transition-all duration-300"
+              className="border  hover:shadow-2xl hover:scale-105  border-gray-200 shadow-md  text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-[#427DF6] transition-all duration-300"
             >
-              View All Services
+              <span className='bg-gradient-to-r from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent'>
+                View All Services
+              </span>
+
             </Link>
           </div>
         </div>
