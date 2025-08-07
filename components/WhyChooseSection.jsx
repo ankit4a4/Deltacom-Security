@@ -15,6 +15,7 @@ import {
   CheckCircle,
   Sparkles
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -26,6 +27,7 @@ const WhyChooseSection = () => {
   const cardsRef = useRef([]);
   const imageRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const router = useRouter()
 
   const reasons = [
     {
@@ -286,12 +288,18 @@ const WhyChooseSection = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-2xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <button 
+            className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-2xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            onClick={() => router.push('/contact')}
+            >
               <span>Get Free Security Assessment</span>
               <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
             
-            <button className="px-8 py-4 border-2 border-black/20 text-white rounded-2xl font-semibold hover:bg-white/10 hover:border-white/30 transition-all duration-300">
+            <button 
+            className="px-8 py-4 border-2 border-black/20 text-white rounded-2xl font-semibold hover:bg-white/10 hover:border-white/30 transition-all duration-300"
+                onClick={() => router.push('/about')}
+            >
               About us 
             </button>
           </div>

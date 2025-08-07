@@ -80,12 +80,11 @@
       "shortDescription": "Control who enters your facility with precision",
       "accent": "from-emerald-400 to-emerald-600",
       "icon": "Key",
-      "heroImage": "/images/services/access-control-hero.jpg",
+      "heroImage": "/images/services/access-control.png",
       "gallery": [
         "/images/services/access-1.jpg",
-        "/images/services/access-2.jpg",
-        "/images/services/access-3.jpg",
-        "/images/services/access-4.jpg"
+        "/images/services/access-2.jpg"
+     
       ],
       "features": [
         {
@@ -152,12 +151,11 @@
       "shortDescription": "Protect your digital assets with enterprise-grade security",
       "accent": "from-purple-400 to-purple-600",
       "icon": "Shield",
-      "heroImage": "/images/services/cybersecurity-hero.jpg",
+      "heroImage": "/images/services/cybersecurity-background.png",
       "gallery": [
         "/images/services/cyber-1.jpg",
-        "/images/services/cyber-2.jpg",
-        "/images/services/cyber-3.jpg",
-        "/images/services/cyber-4.jpg"
+        "/images/services/cyber-2.jpg"
+       
       ],
       "features": [
         {
@@ -224,12 +222,10 @@
       "shortDescription": "Rapid fire detection and suppression systems",
       "accent": "from-red-400 to-red-600",
       "icon": "Flame",
-      "heroImage": "/images/services/fire-protection-hero.jpg",
+      "heroImage": "/images/services/fire-protection-background.png",
       "gallery": [
-        "/images/services/fire-1.jpg",
-        "/images/services/fire-2.jpg",
-        "/images/services/fire-3.jpg",
-        "/images/services/fire-4.jpg"
+        "/images/fire/1.webp",
+        "/images/fire/2.jpg"
       ],
       "features": [
         {
@@ -296,12 +292,10 @@
       "shortDescription": "Robust network infrastructure for seamless connectivity",
       "accent": "from-cyan-400 to-cyan-600",
       "icon": "Network",
-      "heroImage": "/images/services/networking-hero.jpg",
+      "heroImage": "/images/services/networking-background.png",
       "gallery": [
         "/images/services/network-1.jpg",
-        "/images/services/network-2.jpg",
-        "/images/services/network-3.jpg",
-        "/images/services/network-4.jpg"
+        "/images/services/network-2.jpg"
       ],
       "features": [
         {
@@ -368,12 +362,10 @@
       "shortDescription": "Portable security solutions for any location",
       "accent": "from-orange-400 to-orange-600",
       "icon": "Truck",
-      "heroImage": "/images/services/mobile-surveillance-hero.jpg",
+      "heroImage": "/images/services/mobile-surveillance-background.jpg",
       "gallery": [
         "/images/services/mobile-1.jpg",
-        "/images/services/mobile-2.jpg",
-        "/images/services/mobile-3.jpg",
-        "/images/services/mobile-4.jpg"
+        "/images/services/mobile-2.jpg"
       ],
       "features": [
         {

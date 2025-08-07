@@ -56,7 +56,7 @@ const SERVICES_DATA = [
   },
   {
     id: "networking",
-    slug: "networking",
+    slug: "networking-solutions",
     title: "Networking",
     subtitle: "Infrastructure",
     description:

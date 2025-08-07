@@ -3,6 +3,7 @@
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 // Import Swiper components and styles
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,6 +19,7 @@ export default function HeroSection() {
   const tagsRef = useRef([]);
   const cardRef = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   // Background images array
   const backgroundImages = [
@@ -84,10 +86,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section
-      ref={heroRef}
-      className="relative mt-24 py-10 overflow-hidden"
-    >
+    <section ref={heroRef} className="relative mt-24 py-10 overflow-hidden">
       {/* Swiper Background Images */}
       <div className="absolute inset-0 z-0">
         <Swiper
@@ -187,11 +186,17 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-4 bg-gray-900 text-white rounded-2xl hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <button
+               className="px-8 py-4 bg-gray-900 text-white rounded-2xl hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+               onClick={() => router.push('/contact')}
+               >
                 Get Free Consultation
               </button>
-              <button className="px-8 py-4 bg-white/80 backdrop-blur-sm text-gray-700 rounded-2xl border border-gray-200 hover:bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                View Our Services
+              <button
+               className="px-8 py-4 bg-white/80 backdrop-blur-sm text-gray-700 rounded-2xl border border-gray-200 hover:bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+               onClick={() => router.push('/about')}
+               >
+                Explore Our Journey
               </button>
             </div>
 

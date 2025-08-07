@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import servicesData from "../../../public/data/services.json"
-import ServiceDetailClient from '../../../components/ServiceDetailClient'
+import servicesData from "../../../public/data/services.json";
+import ServiceDetailClient from '../../../components/ServiceDetailClient';
 
 // Generate static params for all services
 export async function generateStaticParams() {
@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 // Generate metadata for each service page
 export async function generateMetadata({ params }) {
   const service = servicesData.services.find(s => s.slug === params.slug);
-  
+
   if (!service) {
     return {
       title: 'Service Not Found',
@@ -33,6 +33,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
+// Page Component
 export default function ServiceDetailPage({ params }) {
   const service = servicesData.services.find(s => s.slug === params.slug);
 
@@ -40,5 +41,5 @@ export default function ServiceDetailPage({ params }) {
     notFound();
   }
 
-  return <ServiceDetailClient service={service} />;
+  return <ServiceDetailClient service={service} slug={params.slug} />;
 }
