@@ -51,9 +51,9 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
     { name: 'Commercial', href: '/commercial' },
     { name: 'Fire Protection', href: '/fire' },
+    { name: 'Cyber Security', href: '/cybersecurity' },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -204,7 +204,7 @@ const Footer = () => {
                       <a
                         key={social.name}
                         href={social.href}
-                        className={`p-2 bg-white/5 rounded-lg ${social.color} transition-all duration-300 hover:scale-110 hover:bg-white/10`}
+                        className={`p-2 bg-white/50 rounded-lg ${social.color} transition-all duration-300 hover:scale-110 hover:bg-white/10`}
                         aria-label={social.name}
                       >
                         <IconComponent className="w-4 h-4" />

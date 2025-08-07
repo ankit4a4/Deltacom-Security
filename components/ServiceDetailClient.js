@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { 
   ArrowLeft, CheckCircle, Star, Clock, Users, Phone, Mail,
   Play, Pause, ChevronLeft, ChevronRight
@@ -14,10 +15,13 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const ServiceDetailClient = ({ service }) => {
+const ServiceDetailClient = ({ service , slug}) => {
   const heroRef = useRef(null);
   const contentRef = useRef(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const router = useRouter()
+
+  
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -63,9 +67,9 @@ const ServiceDetailClient = ({ service }) => {
   };
 
   return (
-    <div className="min-h-screen mt-24 bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen md:mt-[120px] mt-20 bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative h-screen overflow-hidden">
+      <section ref={heroRef} className="relative py-20  overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -79,30 +83,10 @@ const ServiceDetailClient = ({ service }) => {
           <div className="absolute inset-0 bg-black/20"></div>
         </div>
 
-        {/* Navigation */}
-        <nav className="absolute top-0 left-0 right-0 z-20 p-6 lg:p-8">
-          <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <Link 
-              href="/#services"
-              className="flex items-center gap-3 px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30 transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5" />
-              <span>Back to Services</span>
-            </Link>
-            
-            <div className="flex items-center gap-4">
-              <a href="tel:+12025551234" className="p-3 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30 transition-colors">
-                <Phone className="w-5 h-5" />
-              </a>
-              <Link href="/contact" className="px-6 py-2 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-colors">
-                Get Quote
-              </Link>
-            </div>
-          </div>
-        </nav>
+       
 
         {/* Hero Content */}
-        <div className="hero-content absolute inset-0 flex items-center justify-center z-10">
+        <div className="hero-content  inset-0 flex items-center justify-center z-10">
           <div className="max-w-4xl mx-auto text-center px-6">
             <h1 className="text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               {service.title}
@@ -112,18 +96,18 @@ const ServiceDetailClient = ({ service }) => {
             </p>
             
             {/* Trust Indicators */}
-            <div className="flex items-center justify-center gap-8 mb-8">
-              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
-                <Star className="w-5 h-5 text-yellow-300" />
-                <span className="text-white font-medium">Enterprise Grade</span>
+            <div className="flex items-center justify-center gap-2 md:gap-8 mb-8">
+              <div className="flex items-center  md:px-4 md:py-2 py-2 px-3 gap-1 bg-white/10 backdrop-blur-sm rounded-full">
+                <Star className="w-5 h-5 text-white" />
+                <span className="text-white font-medium text-sm">Enterprise Grade</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
-                <Clock className="w-5 h-5 text-green-300" />
-                <span className="text-white font-medium">24/7 Support</span>
+              <div className="flex items-center md:gap-2 md:px-4 md:py-2 py-2 px-3 gap-1 bg-white/10 backdrop-blur-sm rounded-full">
+                <Clock className="w-5 h-5 text-white" />
+                <span className="text-white font-medium text-sm ">24/7 Support</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
-                <Users className="w-5 h-5 text-blue-300" />
-                <span className="text-white font-medium">500+ Clients</span>
+              <div className="flex items-center md:gap-2 md:px-4 md:py-2 py-2 px-3 gap-1 bg-white/10 backdrop-blur-sm rounded-full">
+                <Users className="w-5 h-5 text-white" />
+                <span className="text-white font-medium text-sm">500+ Clients</span>
               </div>
             </div>
 
@@ -134,7 +118,9 @@ const ServiceDetailClient = ({ service }) => {
               >
                 Get Free Consultation
               </Link>
-              <button className="px-10 py-4 border-2 border-white text-white rounded-2xl font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button
+              onClick={() => router.push(`/services/${slug}/#case`)}
+                className="px-10 py-4 border-2 border-white text-white rounded-2xl font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 View Case Studies
               </button>
             </div>
@@ -143,7 +129,7 @@ const ServiceDetailClient = ({ service }) => {
       </section>
 
       {/* Main Content */}
-      <div ref={contentRef} className="relative z-10 -mt-20">
+      <div ref={contentRef} className="relative z-10 -mt-10">
         {/* Features Section */}
         <section className="animate-section bg-white/90 backdrop-blur-xl rounded-t-[3rem] px-6 py-20 lg:px-8">
           <div className="max-w-6xl mx-auto">
@@ -159,9 +145,9 @@ const ServiceDetailClient = ({ service }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {service.features.map((feature, index) => (
-                <div key={index} className="group p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200/50 hover:bg-white hover:shadow-lg transition-all duration-300">
+                <div key={index} className="group p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200/80 hover:bg-white hover:shadow-lg transition-all duration-300">
                   <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.accent} mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <CheckCircle className="h-6 w-6 text-white" />
+                    <CheckCircle className="h-6 w-6 text-green-900" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{feature.description}</p>
@@ -245,7 +231,7 @@ const ServiceDetailClient = ({ service }) => {
                 <ul className="space-y-4">
                   {service.benefits.map((benefit, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-6 w-6 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-6 w-6 text-white mt-0.5 flex-shrink-0" />
                       <span className="text-gray-100">{benefit}</span>
                     </li>
                   ))}
@@ -256,7 +242,7 @@ const ServiceDetailClient = ({ service }) => {
         </section>
 
         {/* Case Study Section */}
-        <section className="animate-section py-20 px-6 lg:px-8">
+        <section className="animate-section py-20 px-6 lg:px-8" id='case'>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-8">
               Success Story
@@ -272,7 +258,7 @@ const ServiceDetailClient = ({ service }) => {
               <div className="grid md:grid-cols-3 gap-6">
                 {service.caseStudy.results.map((result, index) => (
                   <div key={index} className="p-4 bg-gray-50 rounded-xl">
-                    <CheckCircle className="h-8 w-8 text-green-500 mx-auto mb-3" />
+                    <CheckCircle className="h-8 w-8 text-black mx-auto mb-3" />
                     <p className="font-medium text-gray-900">{result}</p>
                   </div>
                 ))}
@@ -282,7 +268,7 @@ const ServiceDetailClient = ({ service }) => {
         </section>
 
         {/* CTA Section */}
-        <section className="animate-section bg-gradient-to-br from-gray-900 to-gray-700 py-20 px-6 lg:px-8 text-white">
+        <section className="animate-section bg-slate-900 py-20 px-6 lg:px-8 text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               Ready to Enhance Your Security?
@@ -295,16 +281,11 @@ const ServiceDetailClient = ({ service }) => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 href="/contact"
-                className={`px-10 py-4 bg-gradient-to-r ${service.accent} text-white font-semibold rounded-2xl hover:shadow-2xl transition-all duration-300 hover:scale-105`}
+                className={`px-10 py-4 bg-gradient-to-r ${service.accent} text-black font-semibold rounded-2xl hover:shadow-2xl transition-all duration-300 hover:scale-105`}
               >
                 Get Free Consultation
               </Link>
-              <Link
-                href="/#services"
-                className="px-10 py-4 border-2 border-white text-white rounded-2xl font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
-                View All Services
-              </Link>
+          
             </div>
 
             {/* Contact Info */}

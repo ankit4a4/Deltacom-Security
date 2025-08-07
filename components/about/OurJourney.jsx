@@ -83,7 +83,7 @@ const OurJourney = () => {
                     </div>
                   </div>
                 </div>
-              </div>``
+              </div>
             ))}
           </div>
 
