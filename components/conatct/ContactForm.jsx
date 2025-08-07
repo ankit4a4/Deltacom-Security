@@ -253,7 +253,7 @@ const ContactForm = () => {
                 </p>
                 <p className="text-sm text-slate-500">
                   For immediate assistance, call us at{' '}
-                  <strong>(202) 555-SECURITY</strong>
+                  <strong>(703) 345-1012</strong>
                 </p>
               </div>
             )}

@@ -50,14 +50,14 @@ const GetInTouch = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: '(202) 555-SECURITY',
+      details: '(703) 345-1012',
       subtitle: 'Call for immediate assistance',
       gradient: 'from-green-500 to-green-700',
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'info@deltacomsecurity.com',
+      details: 'support@deltacomsecurity.com',
       subtitle: 'Get a response within 24 hours',
       gradient: 'from-blue-500 to-blue-700',
     },
@@ -112,6 +112,17 @@ const GetInTouch = () => {
             );
           })}
         </div>
+
+        {/* False Alarm Notice */}
+       {/* False Alarm Notice */}
+<div className="mt-16 bg-[#E5EDFF] border-l-4 border-[#427DF6] text-[#1F3C88] p-6 rounded-xl shadow-md max-w-3xl mx-auto" role="alert">
+  <h3 className="text-xl font-semibold mb-2">To Cancel a False Alarm:</h3>
+  <p className="text-base">
+    Call <a href="tel:18006332677" className="underline font-medium">1-800-633-2677</a>, select option 1,
+    and then select your monitoring station to cancel the false alarm.
+  </p>
+</div>
+
       </div>
     </section>
   );

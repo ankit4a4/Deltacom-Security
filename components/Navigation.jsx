@@ -21,7 +21,6 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
   }, [pathname]);
@@ -75,12 +74,12 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center gap-6">
             <div className="flex flex-col items-start gap-2 text-sm">
               <a
-                href="mailto:info@deltacomsecurity.com"
+                href="mailto:support@deltacomsecurity.com"
                 className={`flex items-center gap-2 transition-colors duration-300 ${scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-gray-600 hover:text-gray-900'
                   }`}
               >
                 <Mail className="w-4 h-4" />
-                <span className="hidden xl:inline">info@deltacomsecurity.com</span>
+                <span className="hidden xl:inline">support@deltacomsecurity.com</span>
               </a>
               <a
                 href="tel:+12025551234"
@@ -88,7 +87,7 @@ const Navigation = () => {
                   }`}
               >
                 <Phone className="w-4 h-4" />
-                <span className="hidden xl:inline">(202) 555-1234</span>
+                <span className="hidden xl:inline"> (703) 345-1012</span>
               </a>
             </div>
             <Link
@@ -147,7 +146,7 @@ const Navigation = () => {
             {/* Mobile Menu Navigation */}
             <div className="flex-1 py-6">
               <div className="space-y-2 px-6">
-                {navItems.map((item) => (
+                {navItems.map((item) => ( 
                   <Link
                     key={item.name}
                     href={item.href}
@@ -166,18 +165,18 @@ const Navigation = () => {
             <div className="p-6 border-t border-gray-200 space-y-4">
               <div className="space-y-3">
                 <a
-                  href="mailto:info@deltacomsecurity.com"
+                  href="mailto:support@deltacomsecurity.com"
                   className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   <Mail className="w-5 h-5" />
-                  <span>info@deltacomsecurity.com</span>
+                  <span>support@deltacomsecurity.com</span>
                 </a>
                 <a
                   href="tel:+12025551234"
                   className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>(202) 555-1234</span>
+                  <span> (703) 345-1012</span>
                 </a>
               </div>
               <Link
