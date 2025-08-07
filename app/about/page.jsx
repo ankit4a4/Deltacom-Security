@@ -5,9 +5,11 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Shield, Users, Award, MapPin, Clock, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
-import HeroSectionImage from "../../public/images/about/HeroImage.jpg"
+import AboutHero from "@/components/about/AboutHero"
+import OurMission from "@/components/about/OurMission"
+import OurValues from "@/components/about/OurValues"
+import OurJourney from "@/components/about/OurJourney"
 
-import Image from 'next/image';
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -43,186 +45,26 @@ export default function About() {
     return () => ctx.revert();
   }, []);
 
-  const values = [
-    {
-      icon: Shield,
-      title: 'Security First',
-      description: 'Every solution is designed with security as the primary consideration, ensuring maximum protection.'
-    },
-    {
-      icon: Users,
-      title: 'Client-Focused',
-      description: 'We tailor our services to meet the unique needs of each client, from small businesses to government agencies.'
-    },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description: 'Committed to delivering the highest quality installations and ongoing support services.'
-    },
-    {
-      icon: Clock,
-      title: 'Reliability',
-      description: '24/7 monitoring and support ensures your security systems are always operational when you need them.'
-    }
-  ];
+ 
 
-  const milestones = [
-    { year: '2000', event: 'Deltacom Security Founded' },
-    { year: '2003', event: 'Secured First Major Residential Contract' },
-    { year: '2007', event: 'Expanded Services Across Virginia & Maryland' },
-    { year: '2010', event: 'Achieved 100+ Successful Installations' },
-    { year: '2014', event: 'Awarded First Government Security Contract' },
-    { year: '2016', event: 'Launched Smart Home Security Solutions' },
-    { year: '2018', event: 'Expanded to Cybersecurity Services' },
-    { year: '2020', event: '500+ Installations Completed' },
-    { year: '2022', event: 'Added Fire Protection Systems' },
-    { year: '2024', event: '1000+ Satisfied Clients' }
-  ];
+  
 
   return (
     <div ref={containerRef} className="page-content">
       {/* Hero Section */}
-      <section className="relative mt-[115px] h-[400px] flex flex-col items-center justify-center">
-        {/* Background image */}
-        <div className="absolute inset-0">
-          <Image
-            height={100}
-            width={100}
-            src={HeroSectionImage}
-            alt="Background"
-            className="w-full h-full object-cover"
-          />
-          {/* Black overlay */}
-          <div className="absolute inset-0 bg-black opacity-60"></div>
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            About{" "}
-            <span className="">
-              Deltacom Security
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            {`For over a decade, we've been the Washington, DC Metro Area's most trusted security provider, 
-      delivering innovative solutions that protect what matters most.`}
-          </p>
-        </div>
-      </section>
+      <AboutHero />
+      <OurMission />
+      <OurValues />
+      <OurJourney />
 
 
-      {/* Mission & Vision */}
-      <section className="py-20 bg-white animate-sections">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-section">
-              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-                Our Mission
-              </h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                To deliver smart, end-to-end security and IT solutions that protect people, property, and operations.
-                We combine cutting-edge technology with local expertise to provide comprehensive security solutions
-                that give our clients peace of mind.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3" />
-                  <span className="text-slate-700">Comprehensive Security Solutions</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3" />
-                  <span className="text-slate-700">Local Expertise & Support</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="h-6 w-6 text-green-500 mr-3" />
-                  <span className="text-slate-700">Cutting-Edge Technology</span>
-                </div>
-              </div>
-            </div>
-            <div className="animate-section">
-              <div className="glass rounded-2xl p-8 bg-gradient-to-br from-blue-50 to-orange-50">
-                <Shield className="h-16 w-16 text-blue-600 mb-6" />
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Vision</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  To be the leading security technology provider in the region, known for innovation,
-                  reliability, and exceptional customer service. We envision a future where advanced
-                  security technology seamlessly integrates with daily operations to create safer environments for everyone.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Core Values */}
-      <section className="py-20 bg-slate-50 animate-sections">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-section">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-              Our Core Values
-            </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              These values guide every decision we make and every solution we deliver.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => {
-              const IconComponent = value.icon;
-              return (
-                <div key={index} className="animate-section">
-                  <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                    <div className="p-3 bg-gradient-to-r from-blue-500 to-blue-700 rounded-2xl inline-flex mb-6">
-                      <IconComponent className="h-8 w-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-4">{value.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{value.description}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+   
 
       {/* Company History */}
-      <section className="py-20 bg-white animate-sections">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-section">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-              Our Journey
-            </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              {` From our founding to today, we've consistently grown and evolved to meet 
-              the changing security needs of our clients.`}
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-4 lg:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-[#8B3AEA] transform lg:-translate-x-0.5"></div>
-
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`relative flex items-center animate-section ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                  }`}>
-                  {/* Timeline Dot */}
-                  <div className="absolute left-4 lg:left-1/2 w-4 h-4 bg-gradient-to-r from-blue-500 to-[#8B3AEA] rounded-full transform lg:-translate-x-2 z-10"></div>
-
-                  <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'}`}>
-                    <div className="ml-12 lg:ml-0 bg-white rounded-2xl p-6 shadow-lg">
-                      <div className="text-2xl font-bold  mb-2 bg-gradient-to-r from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent">{milestone.year}</div>
-                      <div className="text-lg font-semibold text-slate-900">{milestone.event}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Service Area */}
       <section className="py-20 bg-slate-900 animate-sections">

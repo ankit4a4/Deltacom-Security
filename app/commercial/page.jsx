@@ -341,15 +341,7 @@ export default function Commercial() {
 
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-            <Link
-              href="/"
-              className="border hover:scale-105 text-black px-8 py-4 rounded-xl font-bold text-lg hover:bg-white  hover:shadow-2xl  transition-all duration-300"
-            >
-              <span className='bg-gradient-to-r  from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent'>
-                View All Services
-              </span>
-
-            </Link>
+           
           </div>
         </div>
       </section>
