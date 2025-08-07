@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Shield,
   Phone,
@@ -96,7 +97,7 @@ const Footer = () => {
             <div className="lg:col-span-4 space-y-6">
               <div className="flex items-center gap-3">
                 <div className=" rounded-xl">
-                  <img src='/images/logo.png' className='w-20'></img>
+                  <Image height={100} width={100}  src='/images/logo.png' className='w-20'></Image>
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Deltacom Security</h3>
