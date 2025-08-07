@@ -230,7 +230,7 @@ export default function About() {
           <div className="text-center animate-section">
             <MapPin className="h-16 w-16 text-[#427DF6] mx-auto mb-6" />
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Serving the Washington, DC Metro Area
+              Serving the Washington, DC Metro Area & Accross the USA
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
               {`   Our local expertise and deep understanding of the region's unique security challenges 

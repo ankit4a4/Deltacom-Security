@@ -164,7 +164,7 @@ const WhyChooseSection = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-5 gap-12 items-start">
+        <div className="grid lg:grid-cols-5 gap-12 items-center">
           
           {/* Left - Reasons List */}
           <div className="lg:col-span-2 space-y-4">

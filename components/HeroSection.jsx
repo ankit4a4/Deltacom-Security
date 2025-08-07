@@ -114,7 +114,7 @@ export default function HeroSection() {
       </div>
 
       {/* Gradient Overlay for better text readability */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/50 via-black/10 to-gray-100/10"></div>
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/50 via-black/20 to-gray-100/10"></div>
 
       {/* Background 3D Elements */}
       <div className="absolute inset-0 z-20 pointer-events-none">
@@ -180,7 +180,7 @@ export default function HeroSection() {
                 ref={subheadingRef}
                 className="text-lg lg:text-xl text-gray-200 max-w-lg leading-relaxed"
               >
-                Protecting the Washington, Washington DC, Maryland, and Virginia with smart, end-to-end security solutions that safeguard your people, property, and
+                Protecting the Washington DC, Maryland, and Virginia with smart, end-to-end security solutions that safeguard your people, property, and
                 operations.
               </p>
             </div>

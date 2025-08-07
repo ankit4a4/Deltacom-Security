@@ -159,9 +159,9 @@ const ServiceDetailClient = ({ service }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {service.features.map((feature, index) => (
-                <div key={index} className="group p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200/50 hover:bg-white hover:shadow-lg transition-all duration-300">
+                <div key={index} className="group p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200/80 hover:bg-white hover:shadow-lg transition-all duration-300">
                   <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.accent} mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <CheckCircle className="h-6 w-6 text-white" />
+                    <CheckCircle className="h-6 w-6 text-green-900" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{feature.description}</p>
