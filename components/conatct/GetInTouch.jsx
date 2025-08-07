@@ -10,7 +10,6 @@ const GetInTouch = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate heading and paragraph
       gsap.fromTo(
         '.get-touch-header',
         { opacity: 0, y: 50 },
@@ -87,7 +86,7 @@ const GetInTouch = () => {
             Get In Touch
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Multiple ways to reach us. Choose what's most convenient for you.
+            Multiple ways to reach us. Choose what&apos;s most convenient for you.
           </p>
         </div>
 

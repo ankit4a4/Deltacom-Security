@@ -29,7 +29,7 @@ const FireCTA = () => {
     <section className="md:py-[100px] py-10 bg-white fire-animate">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
-          Don't Wait - Fire Won't Wait
+          Don&apos;t Wait - Fire Won&apos;t Wait
         </h2>
         <p className="text-xl text-gray-600 mb-8">
           Every facility needs proper fire protection. Get a professional

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Shield, Phone, Mail } from 'lucide-react';
+import Image from 'next/image';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,7 +46,7 @@ const Navigation = () => {
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className={`flex items-center justify-center w-20 h-12 rounded-2xl transition-all duration-300 group-hover:scale-105`}>
-              <img src='/images/logo.png'></img>
+              <Image height={100} width={100} src='/images/logo.png'></Image>
             </div>
 
           </Link>
