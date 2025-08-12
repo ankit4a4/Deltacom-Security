@@ -54,13 +54,10 @@ const IndustriesWeServe = () => {
   }, []);
 
   return (
-    <section
-      className="py-20 bg-slate-50"
-      ref={sectionRef}
-    >
+    <section className="py-20 bg-slate-50" ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-section">
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#013a63] mb-6">
             Industries We Serve
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
@@ -80,7 +77,7 @@ const IndustriesWeServe = () => {
                       <IconComponent className="h-8 w-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-3">
+                      <h3 className="text-xl font-bold text-[#013a63] mb-3">
                         {industry.name}
                       </h3>
                       <p className="text-slate-600 leading-relaxed">

@@ -11,7 +11,7 @@ const ServiceCard = memo(({ service, index }) => {
       className="group relative"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
-      <div className="relative h-96 rounded-3xl overflow-hidden border border-white/20 hover:border-white/40 transition-border duration-300 will-change-transform">
+      <div className="relative h-96 lg:h-[28rem] rounded-3xl overflow-hidden border border-white/20 hover:border-white/40 transition-border duration-300 will-change-transform">
         
         {/* Optimized Background Image */}
         <div className="relative h-full w-full">
@@ -58,7 +58,7 @@ const ServiceCard = memo(({ service, index }) => {
             {/* CTA Button */}
             <Link
               href={`/services/${service.slug}`}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 text-white font-medium hover:bg-white/20 transition-colors duration-300 text-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-xl border border-white/20 text-[#e4ebf1] font-medium hover:bg-white/20 transition-colors duration-300 text-sm"
             >
               Learn More
               <ExternalLink className="w-4 h-4" />

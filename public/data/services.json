@@ -9,7 +9,7 @@
       "shortDescription": "24/7 monitoring with AI-powered analytics",
       "accent": "from-blue-400 to-blue-600",
       "icon": "Cctv",
-      "heroImage": "/images/services/camera.png",
+      "heroImage": "/images/services/camers3.jpg",
       "gallery": [
         "/images/services/cctv1.jpg",
         "/images/services/cctv2.jpg",
@@ -80,7 +80,7 @@
       "shortDescription": "Control who enters your facility with precision",
       "accent": "from-emerald-400 to-emerald-600",
       "icon": "Key",
-      "heroImage": "/images/services/access-control.png",
+      "heroImage": "/images/serv.jpg",
       "gallery": [
         "/images/services/access-1.jpg",
         "/images/services/access-2.jpg"
@@ -362,7 +362,7 @@
       "shortDescription": "Portable security solutions for any location",
       "accent": "from-orange-400 to-orange-600",
       "icon": "Truck",
-      "heroImage": "/images/services/mobile-surveillance-background.jpg",
+      "heroImage": "/images/mobile.jpg",
       "gallery": [
         "/images/services/mobile-1.jpg",
         "/images/services/mobile-2.jpg"

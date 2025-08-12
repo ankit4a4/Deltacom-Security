@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Clock, ShieldAlert } from 'lucide-react';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Clock, ShieldAlert } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,7 +47,7 @@ const SecondCounts = () => {
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
@@ -56,7 +56,7 @@ const SecondCounts = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-section">
           <Clock className="h-16 w-16 text-[#427DF6] mx-auto mb-6" />
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#013a63] mb-6">
             Every Second Counts
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-12">
@@ -71,7 +71,7 @@ const SecondCounts = () => {
                   <div className="text-4xl lg:text-5xl font-bold text-[#427DF6] mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-lg font-semibold text-black mb-3">
+                  <div className="text-lg font-semibold text-[#013a63] mb-3">
                     {stat.unit}
                   </div>
                   <div className="text-slate-600">{stat.description}</div>

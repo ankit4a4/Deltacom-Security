@@ -33,7 +33,7 @@ const CommercialCTA = () => {
   return (
     <section className="py-10 md:py-[120px] bg-white" ref={sectionRef}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6 animate-section">
+        <h2 className="text-3xl lg:text-4xl font-bold text-[#013a63] mb-6 animate-section">
           Secure Your Commercial Property Today
         </h2>
         <p className="text-xl text-gray-600 mb-8 animate-section">
@@ -43,7 +43,7 @@ const CommercialCTA = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-section">
           <Link
             href="/contact"
-            className="bg-white border shadow-sm text-black px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center"
+            className="bg-white border shadow-sm text-[#013a63] px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center"
           >
             <span className="bg-gradient-to-r from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent">
               Schedule Free Assessment

@@ -36,7 +36,7 @@ const ContactHero = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative md:mt-[120px] mt-20 py-20">
+    <section ref={sectionRef} className="relative md:mt-[100px] mt-20 py-20">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
