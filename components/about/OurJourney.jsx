@@ -46,6 +46,26 @@ const OurJourney = () => {
 
   return (
     <section ref={containerRef} className="py-20 bg-white animate-sections">
+      <div className="text-center max-w-7xl mx-auto pb-10 px-4 sm:px-6 lg:px-8 space-y-2">
+        <h1 className="text-3xl lg:text-4xl font-bold text-[#013a63] pb-3">
+          Strategic Cyber Security Partnership for Future-Ready Protection
+        </h1>
+        <p className="pb-3 text-lg text-black/80">
+          Deltacom Security delivers comprehensive long-term cyber security
+          solutions that evolve with emerging threats and technology
+          advancements. Our expert team collaborates with industry-leading
+          technology partners to provide cutting-edge protection strategies
+          tailored to your business requirements. We conduct thorough
+          assessments of your unique security landscape and develop customized
+          defense plans that grow with your organization. Through continuous
+          monitoring and strategic planning, we ensure your digital assets
+          remain protected against current and future cyber threats. Our
+          proactive approach combines advanced threat intelligence with proven
+          security frameworks to create robust, scalable protection systems.
+          Partner with Deltacom Security for enterprise-grade cyber security
+          solutions that provide lasting peace of mind and business continuity.
+        </p>
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 animate-section">
