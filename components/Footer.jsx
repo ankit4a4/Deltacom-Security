@@ -165,8 +165,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <p className="text-gray-100 text-sm">
-                      Washington, DC Metro Area<br />
-                      Serving VA, MD, DC
+                      4000 Legato Road Suite 1100, Fairfax, VA 22033.
                     </p>
                   </div>
                 </div>
