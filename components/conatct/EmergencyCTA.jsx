@@ -44,7 +44,7 @@ const EmergencyCTA = () => {
           experiencing security system issues.
         </p>
         <a
-          href="tel:+12025555555"
+          href="tel:+(703)345-1012"
           className="bg-white border border-gray-100 text-[#013a63] px-8 py-3 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center"
         >
           <Phone className="mr-2 h-5 w-5" />

@@ -86,10 +86,21 @@ const SecondCounts = () => {
           <h3 className="text-2xl lg:text-3xl font-bold mb-4">
             Rapid Response Fire Protection
           </h3>
-          <p className="text-xl text-gray-400 leading-relaxed">
-            Our fire protection systems are designed for the fastest possible
-            detection and response, giving you precious extra seconds to save
-            lives and protect property.
+          <p className="text-lg text-gray-400 font-light leading-relaxed">
+            Deltacom Security's advanced fire protection systems deliver rapid
+            fire detection and immediate emergency response to safeguard lives
+            and property. Our state-of-the-art fire alarm systems, automatic
+            sprinkler installations, and intelligent smoke detection technology
+            provide the fastest possible threat identification. Every second
+            counts during a fire emergency, and our NFPA-certified fire safety
+            systems are engineered to detect fires at the earliest stages. With
+            24/7 monitoring and instant notification capabilities, our fire
+            protection solutions give you critical extra time for safe
+            evacuation and emergency response. Trust Deltacom Security's
+            comprehensive fire safety systems to protect your commercial,
+            industrial, or institutional facility with proven reliability.
+            Contact our fire protection experts today for a professional fire
+            safety assessment and custom system design.
           </p>
         </div>
       </div>

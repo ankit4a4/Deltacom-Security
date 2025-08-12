@@ -7,12 +7,14 @@ import CybersecurityServices from "@/components/cybersecurity/CybersecurityServi
 import IndustrySpecific from "@/components/cybersecurity/IndustrySpecific";
 import InfrastructureServices from "@/components/cybersecurity/InfrastructureServices";
 import CyberCTA from "@/components/cybersecurity/CyberCTA";
+import CyberSecurityContent from "@/components/cybersecurity/CyberSecurityContent"
 
 export default function Cybersecurity() {
   return (
     <>
       <CyberHero />
       <CyberLandscape />
+      <CyberSecurityContent/>
       <CybersecurityServices />
       <IndustrySpecific />
       <InfrastructureServices />

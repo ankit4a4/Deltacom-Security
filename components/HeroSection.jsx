@@ -96,7 +96,7 @@ export default function HeroSection() {
           slidesPerView={1}
           loop={true}
           autoplay={{ delay: 3000 }}
-          className="w-full h-[95vh]"
+          className="w-full h-full"
         >
           {backgroundImages.map((image, index) => (
             <SwiperSlide key={index}>
@@ -138,7 +138,7 @@ export default function HeroSection() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-30 flex items-center max-h-[95vh] px-4 lg:px-8">
+      <div className="relative z-30 flex items-center h-[95vh] px-4 lg:px-8">
         <div className="max-w-[90rem] mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">

@@ -91,9 +91,9 @@ const CyberLandscape = () => {
             Proactive Cybersecurity Defense
           </h3>
           <p className="text-xl text-gray-300 leading-relaxed">
-            Don&apos;t wait for an attack to happen. Our comprehensive
-            cybersecurity solutions provide proactive protection against
-            evolving threats.
+            Fortify your digital infrastructure with industry-leading
+            cybersecurity solutions. Learn how integrated surveillance, AI
+            analytics, and cloud protection keep threats at bay
           </p>
         </div>
       </div>

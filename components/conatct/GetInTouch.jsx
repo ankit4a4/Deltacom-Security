@@ -50,7 +50,7 @@ const GetInTouch = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "(202) 555-SECURITY",
+      details: "(703) 345-1012",
       subtitle: "Call for immediate assistance",
       gradient: "from-green-500 to-green-700",
     },
@@ -92,7 +92,7 @@ const GetInTouch = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
           {contactInfo.map((info, index) => {
             const IconComponent = info.icon;
             return (

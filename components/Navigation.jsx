@@ -28,12 +28,13 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Commercial", href: "/commercial" },
-    { name: "Fire Protection", href: "/fire" },
-    { name: "Cyber Security", href: "/cybersecurity" },
+    { name: "About", href: "/about" }, // Make sure this matches your actual route
+    { name: "Commercial", href: "/commercial-security" }, // Update if needed
+    { name: "Fire Protection", href: "/fire-protection" }, // Update if needed
+    { name: "Cyber Security", href: "/cyber-security" }, // Update if needed
     { name: "Contact", href: "/contact" },
   ];
+
   return (
     <>
       <nav
@@ -70,7 +71,8 @@ const Navigation = () => {
                 }`}
               >
                 {item.name}
-                {pathname === item.href && (
+                {(pathname === item.href ||
+                  (item.href !== "/" && pathname.startsWith(item.href))) && (
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#01497c] rounded-full"></div>
                 )}
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-900 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>

@@ -22,6 +22,24 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/WhyChooseSection.jsx", "components/HeroSection.jsx", "components/Navigation.jsx", "components/ServicesSection.jsx", "components/ServiceModal.jsx", "app/layout.jsx", "app/page.jsx", "app/commercial/page.jsx", "app/about/page.jsx", "app/contact/page.jsx", "app/cybersecurity/page.jsx", "app/fire/page.jsx", "components/CTASection.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "components/WhyChooseSection.jsx",
+    "components/HeroSection.jsx",
+    "components/Navigation.jsx",
+    "components/ServicesSection.jsx",
+    "components/ServiceModal.jsx",
+    "app/layout.jsx",
+    "app/page.jsx",
+    "app/commercial-security/page.jsx",
+    "app/about/page.jsx",
+    "app/contact/page.jsx",
+    "app/cyber-security/page.jsx",
+    "app/fire-protection/page.jsx",
+    "components/CTASection.jsx"
+  ],
   "exclude": ["node_modules"]
 }
