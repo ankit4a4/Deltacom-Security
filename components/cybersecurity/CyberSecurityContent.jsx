@@ -23,7 +23,7 @@ const CyberSecurityContent = () => {
             <Shield className="w-10 h-10 text-blue-600 mb-4" />
             <h3 className="text-xl font-semibold text-[#013a63] mb-3">Zero Trust Architecture</h3>
             <p className="text-slate-600 mb-4">
-              Implement "never trust, always verify" security model with continuous authentication and authorization.
+              {`Implement "never trust, always verify" security model with continuous authentication and authorization.`}
             </p>
             <ul className="space-y-2">
               <li className="flex items-center text-sm text-slate-700">
@@ -67,7 +67,7 @@ const CyberSecurityContent = () => {
             <Cloud className="w-10 h-10 text-blue-600 mb-4" />
             <h3 className="text-xl font-semibold text-[#013a63] mb-3">Cloud Security</h3>
             <p className="text-slate-600 mb-4">
-              Comprehensive cloud protection across AWS, Azure, and Google Cloud platforms.
+              {`Comprehensive cloud protection across AWS, Azure, and Google Cloud platforms.`}
             </p>
             <ul className="space-y-2">
               <li className="flex items-center text-sm text-slate-700">

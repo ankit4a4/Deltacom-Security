@@ -87,7 +87,7 @@ const SecondCounts = () => {
             Rapid Response Fire Protection
           </h3>
           <p className="text-lg text-gray-400 font-light leading-relaxed">
-            Deltacom Security's advanced fire protection systems deliver rapid
+            {`Deltacom Security's advanced fire protection systems deliver rapid
             fire detection and immediate emergency response to safeguard lives
             and property. Our state-of-the-art fire alarm systems, automatic
             sprinkler installations, and intelligent smoke detection technology
@@ -100,7 +100,7 @@ const SecondCounts = () => {
             comprehensive fire safety systems to protect your commercial,
             industrial, or institutional facility with proven reliability.
             Contact our fire protection experts today for a professional fire
-            safety assessment and custom system design.
+            safety assessment and custom system design.`}
           </p>
         </div>
       </div>
