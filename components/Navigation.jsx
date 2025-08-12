@@ -74,20 +74,20 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center gap-6">
             <div className="flex flex-col items-start gap-2 text-sm">
               <a
-                href="mailto:info@deltacomsecurity.com"
+                href="mailto:support@deltacomsecurity.com"
                 className={`flex items-center gap-2 transition-colors duration-300 ${scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-gray-600 hover:text-gray-900'
                   }`}
               >
                 <Mail className="w-4 h-4" />
-                <span className="hidden xl:inline">info@deltacomsecurity.com</span>
+                <span className="hidden xl:inline">support@deltacomsecurity.com</span>
               </a>
               <a
-                href="tel:+12025551234"
+                href="tel:+(703)345-1012"
                 className={`flex items-center gap-2 transition-colors duration-300 ${scrolled ? 'text-gray-600 hover:text-gray-900' : 'text-gray-600 hover:text-gray-900'
                   }`}
               >
                 <Phone className="w-4 h-4" />
-                <span className="hidden xl:inline">(202) 555-1234</span>
+                <span className="hidden xl:inline">(703) 345-1012</span>
               </a>
             </div>
             <Link

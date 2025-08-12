@@ -100,7 +100,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Deltacom Security</h3>
-                  <p className="text-gray-400 text-sm">Washington, DC Metro Area</p>
+                  <p className="text-gray-400 text-sm">4000 Legato Road Suite 1100, Fairfax, VA 22033</p>
                 </div>
               </div>
 
@@ -179,7 +179,7 @@ const Footer = () => {
                     href="tel:+12025551234"
                     className="text-gray-400 hover:text-white transition-colors duration-300"
                   >
-                    (202) 555-1234
+                    (703) 345-1012
                   </a>
                 </div>
 
@@ -189,10 +189,10 @@ const Footer = () => {
                     <Mail className="w-4 h-4 text-gray-400" />
                   </div>
                   <a
-                    href="mailto:info@deltacomsecurity.com"
+                    href="mailto:support@deltacomsecurity.com"
                     className="text-gray-400 hover:text-white transition-colors duration-300"
                   >
-                    info@deltacomsecurity.com
+                 support@deltacomsecurity.com
                   </a>
                 </div>
 
