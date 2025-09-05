@@ -23,9 +23,11 @@ export default function HeroSection() {
 
   // Background images array
   const backgroundImages = [
-    "/images/hero/1.jpg",
-    "/images/hero/2.png",
+    "/images/hero/7.jpg",
+    "/images/hero/5.jpg",
     "/images/hero/3.jpg",
+     "/images/hero/6.jpg",
+
   ];
 
   useEffect(() => {
@@ -86,7 +88,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative mt-24 py-10 overflow-hidden">
+    <section ref={heroRef} className="relative mt-24 py-5 overflow-hidden">
       {/* Swiper Background Images */}
       <div className="absolute inset-0 z-0">
         <Swiper
@@ -113,16 +115,16 @@ export default function HeroSection() {
       </div>
 
       {/* Gradient Overlay for better text readability */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/50 via-black/20 to-gray-100/10"></div>
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/50 via-black/50 to-gray-100/10"></div>
 
       {/* Background 3D Elements */}
       <div className="absolute inset-0 z-20 pointer-events-none">
         {/* Large Circle */}
-        <div className="floating-element absolute top-20 right-20 w-96 h-96 rounded-full border border-gray-200/50 bg-gradient-to-br from-white/20 to-gray-100/20 backdrop-blur-sm"></div>
+        <div className="floating-element absolute top-20 right-20 w-96 h-96 rounded-full  bg-gradient-to-br from-white/5 to-gray-100/20 backdrop-blur-sm"></div>
 
         {/* Medium Circle */}
         <div
-          className="floating-element absolute top-40 right-40 w-64 h-64 rounded-full border border-gray-300/30 bg-gradient-to-br from-gray-100/30 to-white/10 backdrop-blur-sm"
+          className="floating-element absolute top-40 right-40 w-64 h-64 rounded-full  bg-gradient-to-br from-gray-50/10 to-white/5 backdrop-blur-sm"
           style={{ animationDelay: "1s" }}
         ></div>
 
@@ -136,27 +138,27 @@ export default function HeroSection() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-30 flex items-center min-h-[calc(100vh-120px)] px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-30 flex items-center h-[95vh] px-4 lg:px-8">
+        <div className="max-w-[90rem] mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             {/* Service Tags */}
             <div className="flex flex-wrap gap-3">
               <span
                 ref={(el) => (tagsRef.current[0] = el)}
-                className="px-4 py-2 bg-gray-900 text-white text-sm rounded-full"
+                className="px-4 py-2 bg-[#01497c] text-white text-xs md:text-sm rounded-full"
               >
                 Security Systems
               </span>
               <span
                 ref={(el) => (tagsRef.current[1] = el)}
-                className="px-4 py-2 bg-white/80 backdrop-blur-sm text-gray-700 text-sm rounded-full border border-gray-200"
+                className="px-4 py-2 bg-white/80 backdrop-blur-sm text-gray-700 text-xs md:text-sm rounded-full border border-gray-200"
               >
                 CCTV Surveillance
               </span>
               <span
                 ref={(el) => (tagsRef.current[2] = el)}
-                className="px-4 py-2 bg-white/80 backdrop-blur-sm text-gray-700 text-sm rounded-full border border-gray-200"
+                className="px-4 py-2 bg-white/80 backdrop-blur-sm text-gray-700 text-xs md:text-sm rounded-full border border-gray-200"
               >
                 Access Control
               </span>
@@ -187,7 +189,7 @@ export default function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button
-               className="px-8 py-4 bg-gray-900 text-white rounded-2xl hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+               className="px-8 py-4 bg-[#01497c] text-white rounded-2xl hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-xl"
                onClick={() => router.push('/contact')}
                >
                 Get Free Consultation
@@ -212,15 +214,15 @@ export default function HeroSection() {
           </div>
 
           {/* Right Content - Floating Card */}
-          <div className="relative hidden md:flex justify-center lg:justify-end ">
+          {/* <div className="relative hidden md:flex justify-center lg:justify-end ">
             <div
               ref={cardRef}
               className="relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/50 max-w-sm w-full"
             >
-              {/* Card Header */}
+             
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-lg font-semibold text-[#01497c]">
                     DC Metro Security
                   </h3>
                   <p className="text-sm text-gray-500">
@@ -244,10 +246,10 @@ export default function HeroSection() {
                 </button>
               </div>
 
-              {/* Stats */}
+             
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div>
-                  <div className="text-2xl font-bold text-gray-900">24/7</div>
+                  <div className="text-2xl font-bold text-[#01497c]">24/7</div>
                   <div className="text-xs text-gray-500">Monitoring</div>
                 </div>
                 <div>
@@ -256,8 +258,8 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* Security Camera Visual */}
-              <div className="relative bg-gradient-to-br from-gray-900 to-gray-700 rounded-2xl p-6 text-center">
+        
+              <div className="relative bg-gradient-to-br from-[#01497c] to-gray-700 rounded-2xl p-6 text-center">
                 <div className="w-16 h-16 mx-auto bg-gradient-to-br from-gray-600 to-gray-800 rounded-2xl flex items-center justify-center mb-4">
                   <div className="w-8 h-8 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center">
                     <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
@@ -272,19 +274,18 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Floating accent elements */}
             <div className="floating-element absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl opacity-60"></div>
             <div
               className="floating-element absolute -bottom-8 -left-4 w-16 h-16 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl opacity-40"
               style={{ animationDelay: "2s" }}
             ></div>
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-gray-900/95 backdrop-blur-sm lg:hidden">
+        <div className="fixed inset-0 z-50 bg-[#01497c]/95 backdrop-blur-sm lg:hidden">
           <div className="flex flex-col items-center justify-center h-full space-y-8 text-white">
             <button
               onClick={() => setIsMenuOpen(false)}
@@ -322,7 +323,7 @@ export default function HeroSection() {
             >
               Contact
             </a>
-            <button className="mt-8 px-8 py-4 bg-white text-gray-900 rounded-2xl hover:bg-gray-100 transition-colors">
+            <button className="mt-8 px-8 py-4 bg-white text-[#01497c] rounded-2xl hover:bg-gray-100 transition-colors">
               Get Free Quote
             </button>
           </div>

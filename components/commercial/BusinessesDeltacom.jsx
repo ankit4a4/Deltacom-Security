@@ -60,7 +60,7 @@ const BusinessesDeltacom = () => {
     <section className="py-20 bg-white animate-sections" ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-section">
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#013a63] mb-6">
             Why Businesses Choose Deltacom
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
@@ -77,7 +77,7 @@ const BusinessesDeltacom = () => {
                 <div className="p-4 bg-gradient-to-r from-blue-500 to-blue-700 rounded-2xl inline-flex mb-6">
                   <IconComponent className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">
+                <h3 className="text-xl font-bold text-[#013a63] mb-4">
                   {benefit.title}
                 </h3>
                 <p className="text-slate-600 leading-relaxed">

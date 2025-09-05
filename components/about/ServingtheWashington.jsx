@@ -32,7 +32,7 @@ const ServingtheWashington = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-20 bg-slate-900 animate-sections">
+    <section ref={containerRef} className="py-20 bg-gradient-to-br from-[#013a63] via-[#01497c] to-[#013a63] animate-sections">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

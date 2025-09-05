@@ -1,34 +1,34 @@
-'use client'
-import React, { useEffect } from 'react'
-import { ArrowRight } from 'lucide-react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Link from 'next/link'
+"use client";
+import React, { useEffect } from "react";
+import { ArrowRight } from "lucide-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const FireCTA = () => {
   useEffect(() => {
     gsap.fromTo(
-      '.fire-animate',
+      ".fire-animate",
       { opacity: 0, y: 50 },
       {
         opacity: 1,
         y: 0,
         duration: 1,
         scrollTrigger: {
-          trigger: '.fire-animate',
-          start: 'top 80%',
-          toggleActions: 'play none none none',
+          trigger: ".fire-animate",
+          start: "top 80%",
+          toggleActions: "play none none none",
         },
       }
-    )
-  }, [])
+    );
+  }, []);
 
   return (
     <section className="md:py-[100px] py-10 bg-white fire-animate">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
+        <h2 className="text-3xl lg:text-4xl font-bold text-[#013a63] mb-6">
           Don&apos;t Wait - Fire Won&apos;t Wait
         </h2>
         <p className="text-xl text-gray-600 mb-8">
@@ -45,11 +45,10 @@ const FireCTA = () => {
             </span>
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-        
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default FireCTA
+export default FireCTA;

@@ -35,10 +35,10 @@ const AboutCTA = () => {
     <div ref={sectionRef}>
       <section className="py-10 md:py-[120px]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6 animate-cta">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#013a63] mb-6 animate-cta">
             Ready to Partner with Us?
           </h2>
-          <p className="text-xl text-black mb-8 animate-cta">
+          <p className="text-xl text-[#013a63] mb-8 animate-cta">
             {`Let's discuss how our experience and expertise can help secure your business.`}
           </p>
           <Link

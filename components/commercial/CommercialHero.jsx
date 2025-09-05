@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from 'react';
-import Image from 'next/image';
+import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 import HeroImage from "@/public/images/commercial/HeroSectionIMage.jpg";
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react'; // ensure you're using lucide icons
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Link from "next/link";
+import { ArrowRight } from "lucide-react"; // ensure you're using lucide icons
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,12 +58,13 @@ const CommercialHero = () => {
             <span>Commercial</span> Security Solutions
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8 animate-hero">
-            Comprehensive security systems designed for businesses, government facilities, and commercial properties
-            throughout the Washington, DC Metro Area.
+            Comprehensive security systems designed for businesses, government
+            facilities, and commercial properties throughout the Washington, DC
+            Metro Area.
           </p>
           <Link
             href="/contact"
-            className="text-black bg-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center animate-hero"
+            className="text-[#013a63] bg-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center animate-hero"
           >
             <span className="bg-gradient-to-r from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent">
               Get Free Assessment

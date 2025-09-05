@@ -75,9 +75,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer ref={footerRef} className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
+    <footer ref={footerRef} className="relative bg-gradient-to-br from-[#013a63] via-[#01497c] to-[#013a63] overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
 
       {/* Floating Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -101,7 +101,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Deltacom Security</h3>
-                  <p className="text-gray-400 text-sm">Washington, DC Metro Area</p>
+                  <p className="text-gray-400 text-sm">4000 Legato Road Suite 1100, Fairfax, VA 22033</p>
                 </div>
               </div>
 
@@ -127,7 +127,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                      className="text-gray-100 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block"
                     >
                       {link.name}
                     </Link>
@@ -144,7 +144,7 @@ const Footer = () => {
                   <li key={service.name}>
                     <Link
                       href={service.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block text-sm"
+                      className="text-gray-100 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block text-sm"
                     >
                       {service.name}
                     </Link>
@@ -161,12 +161,11 @@ const Footer = () => {
                 {/* Address */}
                 <div className="flex items-start gap-3">
                   <div className="p-2 bg-white/5 rounded-lg">
-                    <MapPin className="w-4 h-4 text-gray-400" />
+                    <MapPin className="w-4 h-4 text-gray-100" />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">
-                      Washington, DC Metro Area<br />
-                      Serving VA, MD, DC
+                    <p className="text-gray-100 text-sm">
+                      4000 Legato Road Suite 1100, Fairfax, VA 22033.
                     </p>
                   </div>
                 </div>
@@ -174,26 +173,26 @@ const Footer = () => {
                 {/* Phone */}
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-white/5 rounded-lg">
-                    <Phone className="w-4 h-4 text-gray-400" />
+                    <Phone className="w-4 h-4 text-gray-100" />
                   </div>
                   <a
                     href="tel:+12025551234"
-                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                    className="text-gray-100 hover:text-white transition-colors duration-300"
                   >
-                     (703) 345-1012
+                    (703) 345-1012
                   </a>
                 </div>
 
                 {/* Email */}
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-white/5 rounded-lg">
-                    <Mail className="w-4 h-4 text-gray-400" />
+                    <Mail className="w-4 h-4 text-gray-100" />
                   </div>
                   <a
                     href="mailto:support@deltacomsecurity.com"
-                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                    className="text-gray-100 hover:text-white transition-colors duration-300"
                   >
-                    support@deltacomsecurity.com
+                 support@deltacomsecurity.com
                   </a>
                 </div>
 

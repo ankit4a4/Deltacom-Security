@@ -1,7 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { User, Mail, Building, Phone, MessageSquare, ArrowRight, CheckCircle } from 'lucide-react';
+import React, { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+  User,
+  Mail,
+  Building,
+  Phone,
+  MessageSquare,
+  ArrowRight,
+  CheckCircle,
+} from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,22 +23,22 @@ const ContactForm = () => {
   const thankYouRef = useRef(null);
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    service: "",
+    message: "",
   });
 
   const services = [
-    'Video Surveillance (CCTV)',
-    'Access Control Systems',
-    'Cybersecurity & IT Services',
-    'Fire Protection Systems',
-    'Networking Solutions',
-    'Mobile Surveillance Units',
-    'Other / Multiple Services',
+    "Video Surveillance (CCTV)",
+    "Access Control Systems",
+    "Cybersecurity & IT Services",
+    "Fire Protection Systems",
+    "Networking Solutions",
+    "Mobile Surveillance Units",
+    "Other / Multiple Services",
   ];
 
   useEffect(() => {
@@ -41,7 +49,7 @@ const ContactForm = () => {
         duration: 1,
         scrollTrigger: {
           trigger: headingRef.current,
-          start: 'top 80%',
+          start: "top 80%",
         },
       });
 
@@ -52,7 +60,7 @@ const ContactForm = () => {
         delay: 0.2,
         scrollTrigger: {
           trigger: formRef.current,
-          start: 'top 80%',
+          start: "top 80%",
         },
       });
 
@@ -62,7 +70,7 @@ const ContactForm = () => {
         duration: 1,
         scrollTrigger: {
           trigger: thankYouRef.current,
-          start: 'top 90%',
+          start: "top 90%",
         },
       });
     }, sectionRef);
@@ -89,12 +97,12 @@ const ContactForm = () => {
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        service: "",
+        message: "",
       });
     }, 3000);
   };
@@ -103,7 +111,7 @@ const ContactForm = () => {
     <section ref={sectionRef} className="py-20 bg-slate-50 animate-sections">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headingRef} className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#013a63] mb-6">
             Request Your Free Consultation
           </h2>
           <p className="text-lg text-slate-600">
@@ -117,7 +125,10 @@ const ContactForm = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-semibold text-slate-700 mb-2"
+                    >
                       Full Name *
                     </label>
                     <div className="relative">
@@ -136,7 +147,10 @@ const ContactForm = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-semibold text-slate-700 mb-2"
+                    >
                       Email Address *
                     </label>
                     <div className="relative">
@@ -155,7 +169,10 @@ const ContactForm = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-sm font-semibold text-slate-700 mb-2">
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-semibold text-slate-700 mb-2"
+                    >
                       Company / Organization
                     </label>
                     <div className="relative">
@@ -173,7 +190,10 @@ const ContactForm = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-semibold text-slate-700 mb-2"
+                    >
                       Phone Number
                     </label>
                     <div className="relative">
@@ -192,7 +212,10 @@ const ContactForm = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label
+                    htmlFor="service"
+                    className="block text-sm font-semibold text-slate-700 mb-2"
+                  >
                     Service Interest
                   </label>
                   <select
@@ -212,7 +235,10 @@ const ContactForm = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-semibold text-slate-700 mb-2"
+                  >
                     Message / Project Details
                   </label>
                   <div className="relative">
@@ -233,7 +259,7 @@ const ContactForm = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-white text-black border border-gray-100 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="bg-white text-[#013a63] border border-gray-100 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <span className="bg-gradient-to-r from-[#427DF6] to-[#7826CF] bg-clip-text text-transparent">
                       Submit
@@ -245,15 +271,15 @@ const ContactForm = () => {
             ) : (
               <div ref={thankYouRef} className="text-center py-12">
                 <CheckCircle className="h-20 w-20 text-green-500 mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                <h3 className="text-2xl font-bold text-[#013a63] mb-4">
                   Thank You for Your Request!
                 </h3>
                 <p className="text-lg text-slate-600 mb-6">
                   {`We've received your consultation request and will contact you within 24 hours to discuss your security needs.`}
                 </p>
                 <p className="text-sm text-slate-500">
-                  For immediate assistance, call us at{' '}
-                  <strong>(703) 345-1012</strong>
+                  For immediate assistance, call us at{" "}
+                  <strong>(202) 555-SECURITY</strong>
                 </p>
               </div>
             )}

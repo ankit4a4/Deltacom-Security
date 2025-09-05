@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Clock, ShieldAlert } from 'lucide-react';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Clock, ShieldAlert } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,7 +47,7 @@ const SecondCounts = () => {
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
@@ -56,7 +56,7 @@ const SecondCounts = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-section">
           <Clock className="h-16 w-16 text-[#427DF6] mx-auto mb-6" />
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#013a63] mb-6">
             Every Second Counts
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-12">
@@ -71,7 +71,7 @@ const SecondCounts = () => {
                   <div className="text-4xl lg:text-5xl font-bold text-[#427DF6] mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-lg font-semibold text-black mb-3">
+                  <div className="text-lg font-semibold text-[#013a63] mb-3">
                     {stat.unit}
                   </div>
                   <div className="text-slate-600">{stat.description}</div>
@@ -86,10 +86,21 @@ const SecondCounts = () => {
           <h3 className="text-2xl lg:text-3xl font-bold mb-4">
             Rapid Response Fire Protection
           </h3>
-          <p className="text-xl text-gray-400 leading-relaxed">
-            Our fire protection systems are designed for the fastest possible
-            detection and response, giving you precious extra seconds to save
-            lives and protect property.
+          <p className="text-lg text-gray-400 font-light leading-relaxed">
+            {`Deltacom Security's advanced fire protection systems deliver rapid
+            fire detection and immediate emergency response to safeguard lives
+            and property. Our state-of-the-art fire alarm systems, automatic
+            sprinkler installations, and intelligent smoke detection technology
+            provide the fastest possible threat identification. Every second
+            counts during a fire emergency, and our NFPA-certified fire safety
+            systems are engineered to detect fires at the earliest stages. With
+            24/7 monitoring and instant notification capabilities, our fire
+            protection solutions give you critical extra time for safe
+            evacuation and emergency response. Trust Deltacom Security's
+            comprehensive fire safety systems to protect your commercial,
+            industrial, or institutional facility with proven reliability.
+            Contact our fire protection experts today for a professional fire
+            safety assessment and custom system design.`}
           </p>
         </div>
       </div>
