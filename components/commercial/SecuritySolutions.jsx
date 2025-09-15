@@ -8,7 +8,9 @@ import {
   Flame,
   Network,
   CheckCircle,
+  ShieldHalf
 } from "lucide-react";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,6 +103,18 @@ const SecuritySolutions = () => {
         "Redundancy planning",
       ],
     },
+    {
+      icon: ShieldHalf, 
+      title: "Intrusion",
+      description: "Helping Businesses Prevent Intrusions",
+      features: [
+        "Install reliable business security systems to prevent break-ins",
+        "Real-time alerts to you or a 24/7 professional monitoring center",
+        "Protect property, employees, and valuable assets",
+        "Invest in a trusted intrusion detection system"
+      ],
+    }
+
   ];
 
   return (

@@ -71,7 +71,7 @@ const GetInTouch = () => {
     {
       icon: Clock,
       title: "Business Hours",
-      details: "Monday - Friday: 8AM - 6PM",
+      details: "Monday - Friday: 9AM - 5PM",
       subtitle: "24/7 Emergency Support Available",
       gradient: "from-purple-500 to-purple-700",
     },
@@ -115,14 +115,14 @@ const GetInTouch = () => {
         </div>
 
         {/* False Alarm Notice */}
-       {/* False Alarm Notice */}
-<div className="mt-16 bg-[#E5EDFF] border-l-4 border-[#427DF6] text-[#1F3C88] p-6 rounded-xl shadow-md max-w-3xl mx-auto" role="alert">
-  <h3 className="text-xl font-semibold mb-2">To Cancel a False Alarm:</h3>
-  <p className="text-base">
-    Call <a href="tel:18006332677" className="underline font-medium">1-800-633-2677</a>, select option 1,
-    and then select your monitoring station to cancel the false alarm.
-  </p>
-</div>
+        {/* False Alarm Notice */}
+        <div className="mt-16 bg-[#E5EDFF] border-l-4 border-[#427DF6] text-[#1F3C88] p-6 rounded-xl shadow-md max-w-3xl mx-auto" role="alert">
+          <h3 className="text-xl font-semibold mb-2">To Cancel a False Alarm:</h3>
+          <p className="text-base">
+            Call <a href="tel:18006332677" className="underline font-medium">1-800-633-2677</a>, select option 1,
+            and then select your monitoring station to cancel the false alarm.
+          </p>
+        </div>
 
       </div>
     </section>
