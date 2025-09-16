@@ -25,7 +25,7 @@ export default function HeroSection() {
     "/images/hero/7.jpg",
     "/images/newImags/image1.png",
     "/images/newImags/image2.png",
-    "/images/newImags/image3.png",
+    "/images/hero/hero.jpg",
 
   ];
 
@@ -87,7 +87,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative mt-24 py-5 overflow-hidden">
+    <section ref={heroRef} className="relative mt-24 py-5 md:py-20 overflow-hidden">
       {/* Swiper Background Images */}
       <div className="absolute inset-0 z-0">
         <Swiper

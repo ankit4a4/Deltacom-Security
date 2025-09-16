@@ -30,7 +30,6 @@ export const metadata = {
     ],
   },
 
-  // Twitter
   twitter: {
     card: "summary_large_image",
     title: "About Us - Smart Security & IT Solutions | Deltacom Security",
@@ -41,7 +40,6 @@ export const metadata = {
     site: "@deltacomsecurity",
   },
 
-  // Additional
   alternates: {
     canonical: pageUrl,
   },
