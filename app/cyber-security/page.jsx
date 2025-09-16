@@ -13,9 +13,7 @@ import CMMCSection from "@/components/cybersecurity/CMMCSection"
 export default function Cybersecurity() {
   return (
     <>
-
       <CyberHero />
-      {/* <CMMCSection /> */}
       <CyberLandscape />
       <CyberSecurityContent/>
       <CybersecurityServices />

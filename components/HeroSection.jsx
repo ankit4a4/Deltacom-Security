@@ -21,12 +21,11 @@ export default function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
 
-  // Background images array
   const backgroundImages = [
     "/images/hero/7.jpg",
-    "/images/hero/5.jpg",
-    "/images/hero/3.jpg",
-     "/images/hero/6.jpg",
+    "/images/newImags/image1.png",
+    "/images/newImags/image2.png",
+    "/images/newImags/image3.png",
 
   ];
 
@@ -189,15 +188,15 @@ export default function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button
-               className="px-8 py-4 bg-[#01497c] text-white rounded-2xl hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-xl"
-               onClick={() => router.push('/contact')}
-               >
+                className="px-8 py-4 bg-[#01497c] text-white rounded-2xl hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                onClick={() => router.push('/contact')}
+              >
                 Get Free Consultation
               </button>
               <button
-               className="px-8 py-4 bg-white/80 backdrop-blur-sm text-gray-700 rounded-2xl border border-gray-200 hover:bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
-               onClick={() => router.push('/about')}
-               >
+                className="px-8 py-4 bg-white/80 backdrop-blur-sm text-gray-700 rounded-2xl border border-gray-200 hover:bg-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                onClick={() => router.push('/about')}
+              >
                 Explore Our Journey
               </button>
             </div>
@@ -213,73 +212,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Content - Floating Card */}
-          {/* <div className="relative hidden md:flex justify-center lg:justify-end ">
-            <div
-              ref={cardRef}
-              className="relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/50 max-w-sm w-full"
-            >
-             
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-[#01497c]">
-                    DC Metro Security
-                  </h3>
-                  <p className="text-sm text-gray-500">
-                    Advanced monitoring system
-                  </p>
-                </div>
-                <button className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                  <svg
-                    className="w-4 h-4 text-gray-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
-              </div>
 
-             
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div>
-                  <div className="text-2xl font-bold text-[#01497c]">24/7</div>
-                  <div className="text-xs text-gray-500">Monitoring</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-green-500">99.9%</div>
-                  <div className="text-xs text-gray-500">Uptime</div>
-                </div>
-              </div>
-
-        
-              <div className="relative bg-gradient-to-br from-[#01497c] to-gray-700 rounded-2xl p-6 text-center">
-                <div className="w-16 h-16 mx-auto bg-gradient-to-br from-gray-600 to-gray-800 rounded-2xl flex items-center justify-center mb-4">
-                  <div className="w-8 h-8 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center">
-                    <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                  </div>
-                </div>
-                <p className="text-white text-sm font-medium">
-                  Live Monitoring Active
-                </p>
-                <p className="text-gray-300 text-xs mt-1">
-                  All systems operational
-                </p>
-              </div>
-            </div>
-
-            <div className="floating-element absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl opacity-60"></div>
-            <div
-              className="floating-element absolute -bottom-8 -left-4 w-16 h-16 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl opacity-40"
-              style={{ animationDelay: "2s" }}
-            ></div>
-          </div> */}
         </div>
       </div>
 

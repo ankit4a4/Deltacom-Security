@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Building2, Users, ShieldCheck, Award } from "lucide-react";
+import { Building2, Users, ShieldCheck, Award, Hotel } from "lucide-react";
 import { Cross } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -35,10 +35,16 @@ const IndustriesWeServe = () => {
       icon: Award,
     },
     {
-      name : "Church’s",
-      description : "Deltacom specializes in designing and implementing tailored security systems for churches, providing solutions that protect congregations, staff, and property while maintaining a welcoming environment.",
-      icon : Cross, 
+      name: "Church’s",
+      description: "Deltacom specializes in designing and implementing tailored security systems for churches, providing solutions that protect congregations, staff, and property while maintaining a welcoming environment.",
+      icon: Cross,
+    },
+    {
+      name: "Commercial & Institutional Security",
+      description: "From offices to retail stores, healthcare facilities, banks, schools, and government buildings, we provide tailored security solutions that fit your environment and budget.",
+      icon: Hotel,
     }
+
   ];
 
   useEffect(() => {
